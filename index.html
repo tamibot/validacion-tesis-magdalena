@@ -26,7 +26,7 @@
   .top .lbl{font-size:13px;font-weight:600;color:var(--muted)}
   .dot{width:30px;height:30px;border:1px solid var(--line-2);border-radius:50%;background:#fff;color:#aeb6bf;cursor:pointer;font-size:13px}
 
-  /* INICIO */
+  /* inicio */
   header.hd{padding:26px 0 4px}
   .pill-tag{display:inline-block;font-size:12px;font-weight:700;color:var(--br-d);background:var(--br-50);border-radius:999px;padding:5px 13px}
   header.hd h1{font-size:clamp(23px,6.2vw,29px);font-weight:700;line-height:1.2;letter-spacing:-.02em;margin:14px 0 0}
@@ -36,73 +36,75 @@
   .opt-big{display:flex;align-items:center;gap:15px;background:var(--card);border:1.5px solid var(--line-2);border-radius:var(--r);padding:18px;cursor:pointer;text-align:left;width:100%;font-family:var(--f);transition:.13s}
   .opt-big:hover{border-color:var(--br);background:var(--br-50)}
   .opt-big .em{flex:0 0 auto;width:52px;height:52px;border-radius:13px;background:var(--br-50);display:grid;place-items:center;font-size:27px}
-  .opt-big .tx b{display:block;font-size:17px;font-weight:700;color:var(--ink)}
+  .opt-big .tx b{display:block;font-size:17px;font-weight:700}
   .opt-big .tx span{font-size:13.5px;color:var(--muted)}
   .opt-big .ar{margin-left:auto;color:var(--br);font-size:22px}
   .nota{font-size:13px;color:var(--muted);background:var(--card);border:1px solid var(--line);border-radius:var(--r-s);padding:13px;margin-top:18px;line-height:1.5}
 
   /* progreso */
-  .prog{position:sticky;top:0;z-index:20;background:var(--bg);padding:13px 0 10px}
-  .prog .l{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-bottom:7px;font-weight:500}
-  .prog .l b{color:var(--br-d);font-weight:700}
+  .prog{position:sticky;top:0;z-index:20;background:var(--bg);padding:13px 0 11px}
+  .prog .l{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-bottom:7px;font-weight:600}
+  .prog .l b{color:var(--br-d)}
+  .prog .l .pp{color:var(--ink)}
   .track{height:9px;background:var(--line);border-radius:999px;overflow:hidden}
   .track i{display:block;height:100%;width:0;background:var(--br);border-radius:999px;transition:width .3s ease}
 
-  .secT{display:flex;align-items:center;gap:11px;margin:28px 0 6px}
-  .secT .no{flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:var(--br);color:#fff;font-weight:700;font-size:15px;display:grid;place-items:center}
-  .secT h2{font-size:19px;font-weight:700;margin:0;letter-spacing:-.01em}
-  .secT .s{font-size:13px;color:var(--muted)}
+  .ph{margin:18px 0 8px}
+  .ph h2{font-size:21px;font-weight:700;margin:0;letter-spacing:-.01em}
+  .ph .ps{font-size:13.5px;color:var(--muted);margin-top:3px}
 
-  .gtitle{font-size:15px;font-weight:700;color:var(--ink);margin:22px 0 4px}
-  .legend{font-size:12.5px;color:var(--muted);background:var(--br-50);border-radius:var(--r-s);padding:9px 12px;margin:6px 0 4px}
-  .legend b{color:var(--br-d)}
-
-  /* campos datos */
+  /* datos */
   .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:4px 16px 16px}
   .field{padding-top:16px}
-  .field > label{display:block;font-size:15px;font-weight:600;color:var(--ink);margin-bottom:9px}
+  .field > label{display:block;font-size:15px;font-weight:600;margin-bottom:9px}
   .req{color:var(--danger)}
   input[type=text],input[type=email],input[type=number],textarea{font:inherit;width:100%;color:var(--ink);border:1.5px solid var(--line-2);border-radius:var(--r-s);padding:13px;background:#fff}
   input::placeholder,textarea::placeholder{color:#9aa3ad}
   input:focus,textarea:focus{outline:none;border-color:var(--br);box-shadow:0 0 0 3px var(--br-50)}
-  textarea{min-height:100px;resize:vertical}
+  textarea{min-height:110px;resize:vertical}
   .opts{display:grid;gap:8px}
   .opts label{display:flex;gap:11px;align-items:center;border:1.5px solid var(--line-2);border-radius:var(--r-s);padding:13px;cursor:pointer;font-size:14.5px;transition:.12s;background:#fff}
   .opts label:hover{border-color:var(--br)}
   .opts label:has(input:checked){border-color:var(--br);background:var(--br-50)}
   .opts input{width:19px;height:19px;accent-color:var(--br);flex:0 0 auto}
 
-  /* preguntas likert */
-  .qrow{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:15px 15px 13px;margin-bottom:10px}
-  .qrow .qt{font-size:15.5px;color:var(--ink);line-height:1.4;margin-bottom:12px}
-  .qrow .qt .qn{color:var(--muted);font-weight:600;margin-right:5px}
-  .lk{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+  /* preguntas */
+  .gtitle{font-size:16px;font-weight:700;margin:18px 0 6px}
+  .legend{font-size:12.5px;color:var(--ink-2);background:var(--card);border:1px solid var(--line);border-radius:var(--r-s);padding:11px 13px;margin:6px 0 12px;line-height:1.7}
+  .legend b{display:inline-block;width:18px;height:18px;line-height:18px;text-align:center;background:var(--br);color:#fff;border-radius:5px;font-size:11px;margin-right:3px}
+  .qrow{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:15px 15px 12px;margin-bottom:10px}
+  .qrow .qt{font-size:15.5px;line-height:1.4;margin-bottom:12px}
+  .qrow .qt .qn{color:var(--muted);font-weight:700;margin-right:5px}
+  .lk{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}
   .lk label{cursor:pointer;position:relative}
   .lk input{position:absolute;opacity:0;inset:0;margin:0}
-  .lk .o{border:1.5px solid var(--line-2);border-radius:10px;padding:8px 1px;text-align:center;background:#fff;min-height:58px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;transition:.1s}
-  .lk .o .nn{font-size:17px;font-weight:700;color:var(--ink-2);line-height:1}
-  .lk .o .ll{font-size:9.5px;color:var(--muted);line-height:1.08}
+  .lk .o{border:1.5px solid var(--line-2);border-radius:10px;height:52px;display:grid;place-items:center;background:#fff;font-size:19px;font-weight:700;color:var(--ink-2);transition:.1s}
   .lk label:hover .o{border-color:var(--br)}
-  .lk input:checked + .o{background:var(--br);border-color:var(--br)}
-  .lk input:checked + .o .nn,.lk input:checked + .o .ll{color:#fff}
+  .lk input:checked + .o{background:var(--br);border-color:var(--br);color:#fff}
+  .anchors{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:7px}
   .qrow.miss{border-color:#E7B0A2;background:var(--danger-50)}
   .field.miss input,.field.miss .opts{outline:2px solid #E7B0A2;outline-offset:2px;border-radius:var(--r-s)}
 
-  .consent{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--ink-2);cursor:pointer;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:15px;margin-top:18px}
+  .consent{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--ink-2);cursor:pointer;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:15px;margin-top:16px}
   .consent input{width:22px;height:22px;accent-color:var(--br);flex:0 0 auto;margin-top:1px}
+  .consent.miss{border-color:#E7B0A2;background:var(--danger-50)}
 
-  .cta{margin-top:22px}
-  .aviso{font-size:14px;color:var(--danger);min-height:20px;margin-bottom:10px;text-align:center;font-weight:500}
-  .btn{font:inherit;font-weight:700;font-size:17px;border:none;border-radius:13px;padding:16px;cursor:pointer;width:100%;display:block;text-align:center;text-decoration:none;transition:background .15s}
+  /* nav inferior */
+  .navbar{position:sticky;bottom:0;background:var(--bg);padding:12px 0 16px;margin-top:16px}
+  .navbar .row{display:flex;gap:10px}
+  .aviso{font-size:13.5px;color:var(--danger);min-height:18px;margin-bottom:8px;text-align:center;font-weight:600}
+  .btn{font:inherit;font-weight:700;font-size:16.5px;border:none;border-radius:13px;padding:15px;cursor:pointer;flex:1;display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;transition:background .15s}
   .btn-primary{background:var(--br);color:#fff}
   .btn-primary:hover{background:var(--br-d)}
   .btn-ghost{background:#fff;color:var(--ink);border:1.5px solid var(--line-2)}
   .btn-ghost:hover{border-color:var(--br)}
+  .btn.grow0{flex:0 0 auto;padding:15px 20px}
 
-  .gracias{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:34px 20px;text-align:center}
+  .gracias{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:34px 20px;text-align:center;margin-top:24px}
   .gracias .ck{width:66px;height:66px;border-radius:50%;background:var(--ok-50);color:var(--ok);display:grid;place-items:center;margin:0 auto 14px}
   .gracias h2{font-size:24px;font-weight:700;margin:0 0 6px}
   .gracias p{font-size:15px;color:var(--ink-2);margin:0 0 18px}
+  .gracias .btn{width:100%}
 
   footer{margin-top:36px;border-top:1px solid var(--line);padding:26px 0 42px;text-align:center}
   footer img{width:58px;height:auto;margin-bottom:10px}
@@ -113,8 +115,7 @@
   .kpi .v{font-size:24px;font-weight:700;color:var(--br-d)}
   .kpi .l{font-size:12px;color:var(--muted)}
 
-  @media (max-width:400px){ .lk .o{min-height:54px;padding:7px 1px} .lk .o .ll{font-size:9px} }
-  @media print{.top,.prog,.cta,.no-print{display:none!important}}
+  @media print{.top,.prog,.navbar,.no-print{display:none!important}}
 </style>
 </head>
 <body>
@@ -126,37 +127,32 @@
   <header class="hd">
     <span class="pill-tag">Investigación UNMSM</span>
     <h1>Los edificios y la calidad de vida en Magdalena del Mar</h1>
-    <p class="intro">Queremos conocer su opinión sobre cómo el crecimiento de los edificios (2007–2025) afecta la vida en el distrito. Sus respuestas son <b>confidenciales</b> y solo se usan para esta investigación.</p>
+    <p class="intro">Queremos conocer su opinión sobre cómo el crecimiento de los edificios (2007–2025) afecta la vida en el distrito. Es <b>confidencial</b> y solo se usa para esta investigación.</p>
   </header>
   <div class="ask">Para empezar, ¿quién es usted?</div>
   <div class="choose">
     <button class="opt-big" data-p="vecino"><span class="em">🏠</span><span class="tx"><b>Soy vecino(a) del distrito</b><span>Vive o vivió en Magdalena del Mar</span></span><span class="ar">→</span></button>
     <button class="opt-big" data-p="inmobiliaria"><span class="em">🏗️</span><span class="tx"><b>Represento una inmobiliaria</b><span>Empresa con proyectos en el distrito</span></span><span class="ar">→</span></button>
   </div>
-  <div class="nota">Le tomará entre 8 y 15 minutos. Puede responder desde el celular. Al final, sus respuestas quedan registradas.</div>
+  <div class="nota">Le tomará entre 8 y 15 minutos. Puede responder desde el celular; avanza por pasos y al final se registra.</div>
 </div></div>
 
-<!-- FORMULARIO -->
+<!-- FORMULARIO PAGINADO -->
 <div id="form" class="oculto"><div class="wrap">
-  <div class="prog"><div class="l"><span id="prog-lab">Avance</span><span><b id="pg-n">0</b> de <span id="pg-t">0</span></span></div><div class="track"><i id="pg-bar"></i></div></div>
-
-  <div class="secT"><span class="no">1</span><div><h2 id="t-datos">Sus datos</h2><div class="s" id="s-datos"></div></div></div>
-  <div class="card" id="datos"></div>
-
-  <div class="secT"><span class="no">2</span><div><h2>Sus respuestas</h2><div class="s">Marque la opción que mejor refleje lo que piensa</div></div></div>
-  <div id="preguntas"></div>
-
-  <label class="consent"><input type="checkbox" id="consent"><span>Acepto participar voluntariamente y autorizo el uso de mis respuestas para esta investigación de la UNMSM, de forma confidencial. <span class="req">*</span></span></label>
-
-  <div class="cta">
+  <div class="prog"><div class="l"><span class="pp" id="paso-lab">Paso 1</span><span><b id="pg-n">0</b> de <span id="pg-t">0</span> respondido</span></div><div class="track"><i id="pg-bar"></i></div></div>
+  <div id="wizard"></div>
+  <div class="navbar">
     <div class="aviso" id="aviso"></div>
-    <button class="btn btn-primary" id="enviar">Enviar mis respuestas</button>
-    <button class="btn btn-ghost no-print" id="cancelar" style="margin-top:10px">← Volver al inicio</button>
+    <div class="row">
+      <button class="btn btn-ghost grow0 oculto" id="btn-back">← Atrás</button>
+      <button class="btn btn-primary" id="btn-next">Siguiente →</button>
+    </div>
+    <button class="btn btn-ghost no-print" id="cancelar" style="width:100%;margin-top:10px;font-size:13.5px;padding:11px">Salir</button>
   </div>
 </div></div>
 
 <!-- GRACIAS -->
-<div id="gracias" class="oculto"><div class="wrap" style="padding-top:24px">
+<div id="gracias" class="oculto"><div class="wrap">
   <div class="gracias">
     <div class="ck"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg></div>
     <h2>¡Gracias por participar!</h2>
@@ -169,16 +165,16 @@
 <div id="panel" class="oculto"><div class="wrap" style="padding-top:20px">
   <div style="display:flex;justify-content:space-between;align-items:center;gap:10px">
     <h2 style="margin:0;font-size:20px">Investigador</h2>
-    <button class="btn btn-ghost" style="width:auto;padding:10px 16px;font-size:14px" id="salir">← Volver</button>
+    <button class="btn btn-ghost grow0" style="font-size:14px;padding:10px 16px" id="salir">← Volver</button>
   </div>
   <div class="kpis" id="kpis"></div>
   <div style="display:grid;gap:10px">
-    <button class="btn btn-ghost" id="e-vec">Exportar respuestas de vecinos (CSV)</button>
-    <button class="btn btn-ghost" id="e-inm">Exportar respuestas de inmobiliarias (CSV)</button>
-    <button class="btn btn-ghost" id="e-json">Respaldo JSON</button>
+    <button class="btn btn-ghost" id="e-vec" style="width:100%">Exportar vecinos (CSV)</button>
+    <button class="btn btn-ghost" id="e-inm" style="width:100%">Exportar inmobiliarias (CSV)</button>
+    <button class="btn btn-ghost" id="e-json" style="width:100%">Respaldo JSON</button>
   </div>
   <div id="lista" style="margin-top:14px;font-size:13.5px"></div>
-  <p class="nota">Las respuestas se guardan en este dispositivo. Para recolectar de muchas personas desde un enlace, conviene conectar una base central (Google Sheets) — está listo para activarse.</p>
+  <p class="nota">Las respuestas se guardan en este dispositivo. Para recolectar de muchas personas por enlace conviene una base central (Google Sheets); está listo para activarse.</p>
 </div></div>
 
 <footer>
@@ -195,11 +191,11 @@ function setR(v){try{localStorage.setItem(LS,JSON.stringify(v))}catch(e){}}
 const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));
 const hoy=()=>new Date().toLocaleString("es-PE",{day:"2-digit",month:"2-digit",year:"numeric",hour:"2-digit",minute:"2-digit"});
 
-/* escalas */
-const ESC=[[1,"Muy en desacuerdo"],[2,"En desacuerdo"],[3,"Ni sí ni no"],[4,"De acuerdo"],[5,"Muy de acuerdo"]];
-const ESCG=[[1,"Muy malo"],[2,"Malo"],[3,"Regular"],[4,"Bueno"],[5,"Muy bueno"]];
+/* escalas (texto exacto de la tesis) */
+const ESC={leg:[[1,"Totalmente en desacuerdo"],[2,"En desacuerdo"],[3,"Ni de acuerdo ni en desacuerdo"],[4,"De acuerdo"],[5,"Totalmente de acuerdo"]],a0:"En desacuerdo",a1:"De acuerdo"};
+const ESG={leg:[[1,"Muy deficiente"],[2,"Deficiente"],[3,"Regular"],[4,"Bueno"],[5,"Muy bueno"]],a0:"Muy deficiente",a1:"Muy bueno"};
 
-/* ===== DATOS ===== */
+/* DATOS */
 const D_VEC=[
  {k:"nombre",t:"text",l:"Nombre completo",req:1,ph:"Nombres y apellidos"},
  {k:"dni",t:"text",l:"DNI",req:1,ph:"Número de documento"},
@@ -219,161 +215,185 @@ const D_INM=[
  {k:"rol",t:"radio",l:"Su cargo en la empresa",req:1,op:["Gerente general","Gerente de proyectos","Director técnico","Representante legal","Otro"]},
  {k:"exp",t:"radio",l:"Años de experiencia en proyectos inmobiliarios en Lima",req:1,op:["Menos de 5 años","Entre 5 y 10 años","Más de 10 años"]},
  {k:"nproy",t:"radio",l:"N° de proyectos desarrollados en Magdalena del Mar (2007–2025)",req:1,op:["1 o 2 proyectos","3 a 5 proyectos","Más de 5 proyectos"]},
- {k:"tipo",t:"radio",l:"Tipo de proyectos en el distrito",req:1,op:["Edificios de hasta 5 pisos","Edificios de 6 a 15 pisos","Edificios de más de 15 pisos","Mixto"]},
+ {k:"tipo",t:"radio",l:"Tipo de proyectos en el distrito",req:1,op:["Multifamiliar de hasta 5 pisos","Multifamiliar de 6 a 15 pisos","Multifamiliar de más de 15 pisos","Mixto"]},
 ];
 
-/* ===== PREGUNTAS (rev: ítem de redacción inversa, recodificación interna) ===== */
-const A_GROUPS=[
- {titulo:"Cómo la municipalidad maneja la altura de los edificios", scale:"esc", items:[
-  [1,"La municipalidad comunica claramente las normas sobre altura de los edificios."],
-  [2,"Las normas sobre altura buscan proteger la calidad del distrito."],
-  [3,"Los cambios en las normas de altura se difunden a tiempo."],
-  [4,"Las normas de altura concuerdan con los planes de desarrollo del distrito."],
-  [5,"La municipalidad usa criterios técnicos al aprobar edificios altos."],
-  [6,"Se evalúa la infraestructura urbana antes de aprobar nuevas edificaciones."],
-  [7,"La densificación del distrito parece bien planificada técnicamente."],
-  [8,"La municipalidad fiscaliza adecuadamente las construcciones."],
-  [9,"Los edificios respetan los parámetros aprobados."],
-  [10,"Existe un control efectivo del crecimiento urbano del distrito."],
-  [11,"La municipalidad considera el bienestar de los vecinos en sus decisiones."],
-  [12,"La municipalidad escucha las preocupaciones de los vecinos sobre edificios altos."],
-  [13,"La gestión municipal actúa con transparencia sobre la verticalización."],
-  [14,"La municipalidad rinde cuentas sobre la aprobación de edificios altos."],
-  [15,"La verticalización se ha integrado bien al barrio."],
-  [16,"El crecimiento urbano mantiene equilibrio con la vida residencial."],
-  [17,"Los nuevos edificios mantienen armonía con el entorno."],
-  [18,"El crecimiento vertical ha preservado la identidad del barrio."],
- ]},
- {titulo:"Cómo es vivir hoy en el distrito", scale:"esc", items:[
-  [19,"El crecimiento de edificios altos ha mejorado la calidad urbana del distrito."],
-  [20,"La verticalización ha reducido la tranquilidad del barrio.",1],
-  [21,"El aumento de edificaciones ha generado sensación de saturación.",1],
-  [22,"La densificación ha afectado la privacidad entre viviendas.",1],
-  [23,"El crecimiento de edificios ha aumentado los problemas de tráfico.",1],
-  [24,"La densificación ha dificultado el estacionamiento en el distrito.",1],
-  [25,"Los servicios urbanos han crecido bien frente al aumento de población."],
-  [26,"La infraestructura responde bien al crecimiento del distrito."],
-  [27,"El crecimiento vertical ha reducido los espacios libres del entorno.",1],
-  [28,"Las áreas verdes son insuficientes frente a la densificación.",1],
-  [29,"Los edificios altos afectan la ventilación natural del entorno.",1],
-  [30,"El crecimiento urbano ha aumentado el ruido en el distrito.",1],
-  [31,"Me siento satisfecho viviendo en este sector del distrito."],
-  [32,"La transformación urbana ha mejorado mi bienestar diario."],
-  [33,"El crecimiento urbano ha reducido la calidad de vida del distrito.",1],
-  [34,"El distrito sigue siendo agradable para vivir pese a los edificios."],
-  [35,"Me siento cómodo viviendo en el entorno urbano actual."],
-  [36,"La verticalización ha cambiado negativamente la identidad del barrio.",1],
-  [37,"El crecimiento urbano del distrito ha sido equilibrado."],
-  [38,"La calidad del distrito se ha mantenido pese al crecimiento vertical."],
-  [39,"La verticalización ha debilitado los lazos de convivencia entre vecinos.",1],
- ]},
- {titulo:"En general, ¿cómo califica…?", scale:"escg", items:[
-  ["G1","La gestión de las normas de altura de la municipalidad."],
-  ["G2","La capacidad técnica y de fiscalización de la municipalidad."],
-  ["G3","La relación de la municipalidad con los vecinos sobre edificación."],
-  ["G4","El impacto del crecimiento vertical en la calidad de vida del barrio."],
- ]},
-];
-const B_GROUPS=[
- {titulo:"Normas y requisitos", scale:"esc", items:[
-  [1,"Los parámetros de la municipalidad son claros y predecibles para aprobar proyectos."],
-  [2,"Los cambios de normas se comunican con anticipación suficiente para planificar."],
-  [3,"La normativa distrital concuerda con la planificación metropolitana (MML)."],
-  [4,"Los requisitos para aprobar proyectos en altura son proporcionales y justificados."],
- ]},
- {titulo:"Trámites, fiscalización y tiempos", scale:"esc", items:[
-  [5,"Los criterios técnicos para aprobar edificios en altura son consistentes y predecibles."],
-  [6,"Se evalúa la capacidad de la infraestructura antes de aprobar nuevos proyectos."],
-  [7,"La fiscalización es efectiva y consistente con lo aprobado en las licencias."],
-  [8,"Los tiempos y procedimientos de aprobación de licencias son razonables y eficientes."],
- ]},
- {titulo:"Transparencia e institución", scale:"esc", items:[
-  [9,"La municipalidad actúa con transparencia al aprobar proyectos en altura."],
-  [10,"Considera los impactos urbanos y vecinales al evaluar proyectos."],
-  [11,"La coordinación entre la municipalidad distrital y la MML es eficiente."],
-  [12,"Rinde cuentas públicamente sobre sus decisiones de aprobación."],
- ]},
- {titulo:"En general", scale:"escg", items:[
-  ["G","La gestión municipal en la aprobación y control de edificios en altura (2007–2025)."],
- ]},
-];
-const B_ABIERTA="En su opinión, ¿qué está bien y qué está mal en la regulación municipal de la altura de los edificios en Magdalena del Mar? ¿Qué cambiaría?";
+/* PREGUNTAS — TEXTO EXACTO DE LA TESIS. (rev = ítem inverso, recodificación interna 6−x) */
+const A_G1={titulo:"Sobre la gestión municipal de la altura de los edificios", scale:ESC, items:[
+ [1,"La municipalidad comunica claramente las normas sobre altura edificatoria."],
+ [2,"Las normas sobre altura buscan proteger la calidad urbana del distrito."],
+ [3,"Los cambios normativos sobre altura son difundidos oportunamente."],
+ [4,"La normativa municipal sobre altura edificatoria es coherente con los planes de desarrollo urbano del distrito."],
+ [5,"La municipalidad aplica criterios técnicos al aprobar edificios altos."],
+ [6,"La infraestructura urbana es evaluada antes de aprobar nuevas edificaciones."],
+ [7,"La densificación urbana del distrito parece técnicamente planificada."],
+ [8,"La municipalidad fiscaliza adecuadamente las construcciones."],
+ [9,"Los edificios respetan los parámetros aprobados."],
+ [10,"Existe control efectivo sobre el crecimiento urbano del distrito."],
+ [11,"La municipalidad considera el bienestar de los vecinos en sus decisiones urbanas."],
+ [12,"La municipalidad escucha las preocupaciones vecinales sobre edificios altos."],
+ [13,"La gestión municipal actúa con transparencia respecto a la verticalización."],
+ [14,"La municipalidad rinde cuentas públicamente sobre las decisiones de aprobación de edificaciones en altura."],
+ [15,"La verticalización ha sido integrada adecuadamente al barrio."],
+ [16,"El crecimiento urbano mantiene equilibrio con la vida residencial."],
+ [17,"Los nuevos edificios mantienen armonía con el entorno urbano."],
+ [18,"El crecimiento vertical del distrito ha preservado la identidad arquitectónica del barrio."],
+]};
+const A_G2={titulo:"Sobre su calidad de vida en el distrito", scale:ESC, items:[
+ [19,"El crecimiento de edificios altos ha mejorado la calidad urbana del distrito."],
+ [20,"La verticalización ha reducido la tranquilidad del barrio.",1],
+ [21,"El aumento de edificaciones ha generado sensación de saturación urbana.",1],
+ [22,"La densificación ha afectado negativamente la privacidad entre viviendas.",1],
+ [23,"El crecimiento de edificios ha incrementado los problemas de tráfico vehicular.",1],
+ [24,"La densificación urbana ha dificultado el estacionamiento en el distrito.",1],
+ [25,"Los servicios urbanos han crecido adecuadamente frente al aumento poblacional."],
+ [26,"La infraestructura urbana responde adecuadamente al crecimiento del distrito."],
+ [27,"El crecimiento vertical ha reducido los espacios libres del entorno urbano.",1],
+ [28,"La cantidad de áreas verdes resulta insuficiente frente a la densificación.",1],
+ [29,"Los edificios altos afectan la ventilación natural del entorno urbano.",1],
+ [30,"El crecimiento urbano ha incrementado los niveles de ruido en el distrito.",1],
+ [31,"Me siento satisfecho viviendo en este sector del distrito."],
+ [32,"La transformación urbana del distrito ha mejorado mi bienestar cotidiano."],
+ [33,"Considero que el crecimiento urbano ha reducido la calidad de vida del distrito.",1],
+ [34,"El distrito continúa siendo agradable para vivir pese al aumento de edificios."],
+ [35,"Me siento cómodo viviendo en el entorno urbano actual del distrito."],
+ [36,"La verticalización ha cambiado negativamente la identidad del barrio.",1],
+ [37,"Considero que el crecimiento urbano del distrito ha sido equilibrado."],
+ [38,"La calidad urbana del distrito se ha mantenido pese al crecimiento vertical."],
+ [39,"La verticalización del distrito ha debilitado los lazos de convivencia y solidaridad entre los vecinos.",1],
+]};
+const A_G3={titulo:"En términos generales, ¿cómo califica…?", scale:ESG, items:[
+ ["G1","La gestión normativa de la municipalidad respecto a la altura edificatoria."],
+ ["G2","La capacidad técnica y de fiscalización de la municipalidad en materia de edificaciones."],
+ ["G3","La relación de la municipalidad con los vecinos sobre temas de edificación."],
+ ["G4","El impacto del crecimiento vertical en la calidad de vida del barrio."],
+]};
+const B_G1={titulo:"Normas y requisitos", scale:ESC, items:[
+ [1,"Los parámetros urbanísticos y edificatorios de la municipalidad son claros y predecibles para el proceso de aprobación de proyectos."],
+ [2,"Los cambios normativos sobre altura edificatoria son comunicados con anticipación suficiente para la planificación de proyectos."],
+ [3,"La normativa distrital sobre altura edificatoria es coherente con los instrumentos de planificación metropolitana de la MML."],
+ [4,"Los requisitos normativos para la aprobación de proyectos de edificación en altura son proporcionales y técnicamente justificados."],
+]};
+const B_G2={titulo:"Criterios técnicos, fiscalización y tiempos", scale:ESC, items:[
+ [5,"Los criterios técnicos que aplica la municipalidad para aprobar edificios en altura son consistentes y predecibles."],
+ [6,"La municipalidad evalúa la capacidad de la infraestructura urbana antes de aprobar nuevos proyectos de edificación en altura."],
+ [7,"Los mecanismos de fiscalización y control de la municipalidad son efectivos y consistentes con los parámetros aprobados en las licencias."],
+ [8,"Los tiempos y procedimientos de aprobación de licencias de edificación en la municipalidad son razonables y eficientes."],
+]};
+const B_G3={titulo:"Transparencia e institución", scale:ESC, items:[
+ [9,"La municipalidad actúa con transparencia en los procesos de aprobación de proyectos de edificación en altura."],
+ [10,"La municipalidad considera los impactos urbanos y vecinales al evaluar proyectos de edificación en altura."],
+ [11,"La coordinación entre la municipalidad distrital y la Municipalidad Metropolitana de Lima en materia de edificaciones es eficiente."],
+ [12,"La municipalidad rinde cuentas públicamente sobre sus decisiones en materia de aprobación de edificaciones en altura."],
+]};
+const B_GEN={titulo:"Valoración general", scale:ESG, items:[
+ ["G","En términos generales, ¿cómo califica la gestión municipal de Magdalena del Mar respecto a la aprobación y control de edificaciones en altura (2007–2025)?"],
+]};
+const B_ABIERTA="En su opinión, ¿cuáles son los principales aspectos positivos y negativos de la regulación municipal de la altura edificatoria en Magdalena del Mar (2007–2025)? ¿Qué cambios consideraría necesarios?";
 
-let perfil=null;
+let perfil=null, paso=0, PAGES=[], DATOS={}, RESP={}, CONSENT=false;
 
-/* ===== RENDER ===== */
+/* ===== render helpers ===== */
 function campo(d){
-  let inner="";
-  if(d.t==="radio"){ inner=`<div class="opts">`+d.op.map(o=>`<label><input type="radio" name="d_${d.k}" value="${esc(o)}"><span>${esc(o)}</span></label>`).join("")+`</div>`; }
-  else if(d.t==="number"){ inner=`<input type="number" min="0" max="120" name="d_${d.k}" placeholder="${esc(d.ph||"")}">`; }
-  else { inner=`<input type="${d.t}" name="d_${d.k}" placeholder="${esc(d.ph||"")}">`; }
+  let inner;
+  if(d.t==="radio") inner=`<div class="opts">`+d.op.map(o=>`<label><input type="radio" name="d_${d.k}" value="${esc(o)}"><span>${esc(o)}</span></label>`).join("")+`</div>`;
+  else if(d.t==="number") inner=`<input type="number" min="0" max="120" name="d_${d.k}" placeholder="${esc(d.ph||"")}">`;
+  else inner=`<input type="${d.t}" name="d_${d.k}" placeholder="${esc(d.ph||"")}">`;
   return `<div class="field" data-d="${d.k}" data-req="${d.req}"><label>${esc(d.l)} ${d.req?'<span class="req">*</span>':''}</label>${inner}</div>`;
 }
-function likert(name,scale){
-  const S = scale==="escg"?ESCG:ESC;
-  return `<div class="lk">`+S.map(s=>`<label><input type="radio" name="${name}" value="${s[0]}"><span class="o"><span class="nn">${s[0]}</span><span class="ll">${esc(s[1])}</span></span></label>`).join("")+`</div>`;
+function likert(name,sc){
+  return `<div class="lk">`+sc.leg.map(s=>`<label><input type="radio" name="${name}" value="${s[0]}"><span class="o">${s[0]}</span></label>`).join("")+`</div><div class="anchors"><span>${esc(sc.a0)}</span><span>${esc(sc.a1)}</span></div>`;
 }
-function render(){
-  const D = perfil==="vecino"?D_VEC:D_INM;
-  const G = perfil==="vecino"?A_GROUPS:B_GROUPS;
-  $("#t-datos").textContent="Sus datos";
-  $("#s-datos").textContent = perfil==="vecino"?"Como vecino(a) del distrito":"Como representante de la inmobiliaria";
-  $("#datos").innerHTML = D.map(campo).join("");
-  let h="";
-  G.forEach(g=>{
-    h+=`<div class="gtitle">${esc(g.titulo)}</div>`;
-    h+= g.scale==="escg"
-      ? `<div class="legend"><b>1</b> Muy malo · <b>2</b> Malo · <b>3</b> Regular · <b>4</b> Bueno · <b>5</b> Muy bueno</div>`
-      : `<div class="legend"><b>1</b> Muy en desacuerdo &nbsp;→&nbsp; <b>5</b> Muy de acuerdo</div>`;
-    g.items.forEach(it=>{
-      h+=`<div class="qrow" data-q="q_${it[0]}"><div class="qt"><span class="qn">${typeof it[0]==="number"?it[0]+".":""}</span>${esc(it[1])}</div>${likert("q_"+it[0],g.scale)}</div>`;
-    });
-  });
-  if(perfil==="inmobiliaria"){
-    h+=`<div class="gtitle">Una última pregunta (opcional)</div><div class="qrow" data-q="q_PA" data-opt="1"><div class="qt">${esc(B_ABIERTA)}</div><textarea name="q_PA" placeholder="Escriba su respuesta…"></textarea></div>`;
+function grupo(g){
+  let h=`<div class="gtitle">${esc(g.titulo)}</div><div class="legend">`+g.scale.leg.map(s=>`<b>${s[0]}</b>${esc(s[1])}${s[0]<5?' &nbsp; ':''}`).join("")+`</div>`;
+  g.items.forEach(it=>{ h+=`<div class="qrow" data-q="q_${it[0]}"><div class="qt"><span class="qn">${typeof it[0]==="number"?it[0]+".":""}</span>${esc(it[1])}</div>${likert("q_"+it[0],g.scale)}</div>`; });
+  return h;
+}
+function datosBlock(D,sub){ return `<div class="card" id="datos">`+D.map(campo).join("")+`</div>`; }
+
+/* ===== construir páginas ===== */
+function build(){
+  if(perfil==="vecino"){
+    PAGES=[
+     {t:"Sus datos", s:"Como vecino(a) del distrito", html:datosBlock(D_VEC)},
+     {t:"La municipalidad y los edificios", s:"18 afirmaciones — marque qué tan de acuerdo está", html:grupo(A_G1)},
+     {t:"Su calidad de vida", s:"21 afirmaciones sobre vivir en el distrito", html:grupo(A_G2)},
+     {t:"Valoración general", s:"4 preguntas finales", html:grupo(A_G3)+consentHtml(), final:1},
+    ];
+  } else {
+    PAGES=[
+     {t:"Sus datos", s:"Como representante de la inmobiliaria", html:datosBlock(D_INM)},
+     {t:"Su experiencia con la municipalidad", s:"12 afirmaciones — marque qué tan de acuerdo está", html:grupo(B_G1)+grupo(B_G2)+grupo(B_G3)},
+     {t:"Valoración y comentarios", s:"Una valoración y una pregunta abierta", html:grupo(B_GEN)+`<div class="gtitle">Comentario final (opcional)</div><div class="qrow" data-q="q_PA" data-opt="1"><div class="qt">${esc(B_ABIERTA)}</div><textarea name="q_PA" placeholder="Escriba su respuesta…"></textarea></div>`+consentHtml(), final:1},
+    ];
   }
-  $("#preguntas").innerHTML=h;
-  totalReq();
-  progreso();
 }
-let REQ_DATOS=[], REQ_Q=[];
-function totalReq(){
-  REQ_DATOS = $$("#datos [data-d]").filter(e=>e.dataset.req==="1").map(e=>e.dataset.d);
-  REQ_Q = $$("#preguntas .qrow").filter(e=>!e.dataset.opt).map(e=>e.dataset.q);
-  $("#pg-t").textContent = REQ_DATOS.length+REQ_Q.length+1;
+function consentHtml(){ return `<label class="consent" id="consent-l"><input type="checkbox" id="consent"><span>Acepto participar voluntariamente y autorizo el uso confidencial de mis respuestas para esta investigación de la UNMSM. <span class="req">*</span></span></label>`; }
+
+function reqDatos(){ return (perfil==="vecino"?D_VEC:D_INM).filter(d=>d.req).map(d=>d.k); }
+function allQ(){ const gs=perfil==="vecino"?[A_G1,A_G2,A_G3]:[B_G1,B_G2,B_G3,B_GEN]; return gs.flatMap(g=>g.items.map(it=>"q_"+it[0])); }
+function totalReq(){ return reqDatos().length + allQ().length + 1; }
+
+function capturarPaso(){
+  const w=$("#wizard"); if(!w)return;
+  w.querySelectorAll("[name^='d_']").forEach(el=>{ if(el.type==="radio"){ if(el.checked)DATOS[el.name.slice(2)]=el.value; } else { DATOS[el.name.slice(2)]=el.value.trim(); } });
+  w.querySelectorAll(".qrow").forEach(q=>{ const r=q.querySelector("input:checked"); const ta=q.querySelector("textarea"); const nm=q.dataset.q; if(ta){RESP[nm]=ta.value;} else if(r){RESP[nm]=+r.value;} });
+  const c=$("#consent"); if(c)CONSENT=c.checked;
+}
+function restaurarPaso(){
+  const w=$("#wizard");
+  Object.keys(DATOS).forEach(k=>{ const els=w.querySelectorAll(`[name="d_${k}"]`); if(!els.length)return; if(els[0].type==="radio"){els.forEach(e=>{if(e.value===DATOS[k])e.checked=true;});} else els[0].value=DATOS[k]; });
+  Object.keys(RESP).forEach(nm=>{ const ta=w.querySelector(`.qrow[data-q="${nm}"] textarea`); if(ta){ta.value=RESP[nm];return;} w.querySelectorAll(`[name="${nm}"]`).forEach(e=>{if(+e.value===RESP[nm])e.checked=true;}); });
+  const c=$("#consent"); if(c)c.checked=CONSENT;
 }
 function progreso(){
+  capturarPaso();
   let n=0;
-  REQ_DATOS.forEach(k=>{ const el=document.querySelector(`[name="d_${k}"]`); if(el&&el.type==="radio"){ if(document.querySelector(`[name="d_${k}"]:checked`))n++; } else if(el&&el.value.trim())n++; });
-  REQ_Q.forEach(q=>{ if(document.querySelector(`[name="${q}"]:checked`))n++; });
-  if($("#consent").checked)n++;
-  $("#pg-n").textContent=n;
-  const t=REQ_DATOS.length+REQ_Q.length+1;
-  $("#pg-bar").style.width=Math.round(n/t*100)+"%";
+  reqDatos().forEach(k=>{ if((DATOS[k]==null?"":String(DATOS[k])).trim()!=="")n++; });
+  allQ().forEach(q=>{ if(typeof RESP[q]==="number")n++; });
+  if(CONSENT)n++;
+  const t=totalReq();
+  $("#pg-n").textContent=n; $("#pg-t").textContent=t; $("#pg-bar").style.width=Math.round(n/t*100)+"%";
 }
-document.addEventListener("input",progreso);
-document.addEventListener("change",progreso);
 
-/* ===== NAV ===== */
-$$(".opt-big").forEach(b=>b.addEventListener("click",()=>{ perfil=b.dataset.p; render(); $("#inicio").classList.add("oculto"); $("#form").classList.remove("oculto"); scrollTo(0,0); }));
-$("#cancelar").addEventListener("click",()=>{ if(confirm("¿Volver al inicio? Se perderá lo respondido.")){ $("#form").classList.add("oculto"); $("#inicio").classList.remove("oculto"); perfil=null; scrollTo(0,0);} });
-$("#otra").addEventListener("click",()=>{ $("#gracias").classList.add("oculto"); $("#inicio").classList.remove("oculto"); perfil=null; scrollTo(0,0); });
-
-/* ===== ENVÍO ===== */
-$("#enviar").addEventListener("click",()=>{
-  $$(".qrow,.field").forEach(e=>e.classList.remove("miss"));
-  let falta=0, primero=null;
-  REQ_DATOS.forEach(k=>{ const el=document.querySelector(`[name="d_${k}"]`); let ok; if(el&&el.type==="radio"){ ok=!!document.querySelector(`[name="d_${k}"]:checked`);} else { ok=el&&el.value.trim()!=="";} if(!ok){ falta++; const f=document.querySelector(`[data-d="${k}"]`); f.classList.add("miss"); primero=primero||f; } });
-  REQ_Q.forEach(q=>{ if(!document.querySelector(`[name="${q}"]:checked`)){ falta++; const f=document.querySelector(`[data-q="${q}"]`); f.classList.add("miss"); primero=primero||f; } });
-  if(!$("#consent").checked){ falta++; primero=primero||$("#consent"); }
-  if(falta){ $("#aviso").textContent=`Faltan ${falta} respuesta(s). Las marcamos en rojo.`; (primero||$("#enviar")).scrollIntoView({behavior:"smooth",block:"center"}); return; }
+/* ===== navegación ===== */
+function mostrarPaso(i){
+  paso=i;
+  $("#wizard").innerHTML=`<div class="ph"><h2>${esc(PAGES[i].t)}</h2><div class="ps">${esc(PAGES[i].s||"")}</div></div>`+PAGES[i].html;
+  $("#paso-lab").textContent=`Paso ${i+1} de ${PAGES.length}`;
+  $("#btn-back").classList.toggle("oculto", i===0);
+  $("#btn-next").innerHTML = PAGES[i].final ? "Enviar mis respuestas ✓" : "Siguiente →";
   $("#aviso").textContent="";
-  const datos={}; (perfil==="vecino"?D_VEC:D_INM).forEach(d=>{ const el=document.querySelector(`[name="d_${d.k}"]`); datos[d.k]= el.type==="radio"?(document.querySelector(`[name="d_${d.k}"]:checked`)||{}).value||"":el.value.trim(); });
-  const resp={}; (perfil==="vecino"?A_GROUPS:B_GROUPS).forEach(g=>g.items.forEach(it=>{ const s=document.querySelector(`[name="q_${it[0]}"]:checked`); resp["q_"+it[0]]= s?+s.value:""; }));
-  if(perfil==="inmobiliaria"){ resp["q_PA"]=(document.querySelector('[name="q_PA"]')||{}).value||""; }
-  const all=getR(); all.push({id:"r"+Date.now().toString(36),perfil,fecha:hoy(),datos,resp}); setR(all);
-  $("#form").classList.add("oculto"); $("#gracias").classList.remove("oculto"); scrollTo(0,0);
+  restaurarPaso();
+  progreso();
+  window.scrollTo({top:0,behavior:"instant"});
+}
+function validarPaso(){
+  const page=$("#wizard"); let falta=0, primero=null;
+  page.querySelectorAll("[data-d]").forEach(f=>{ if(f.dataset.req!=="1")return; const k=f.dataset.d; const el=f.querySelector(`[name="d_${k}"]`); let ok = el.type==="radio" ? !!f.querySelector(":checked") : el.value.trim()!==""; if(!ok){falta++;f.classList.add("miss");primero=primero||f;} else f.classList.remove("miss"); });
+  page.querySelectorAll(".qrow").forEach(q=>{ if(q.dataset.opt)return; const ok=!!q.querySelector("input:checked"); if(!ok){falta++;q.classList.add("miss");primero=primero||q;} else q.classList.remove("miss"); });
+  if(PAGES[paso].final){ const c=$("#consent-l"); if(!$("#consent").checked){falta++;c.classList.add("miss");primero=primero||c;} else c.classList.remove("miss"); }
+  if(falta){ $("#aviso").textContent=`Faltan ${falta} respuesta(s) en este paso.`; (primero||page).scrollIntoView({behavior:"smooth",block:"center"}); return false; }
+  $("#aviso").textContent=""; return true;
+}
+$("#btn-next").addEventListener("click",()=>{
+  if(!validarPaso())return;
+  capturarPaso();
+  if(PAGES[paso].final){ enviar(); } else { mostrarPaso(paso+1); }
 });
+$("#btn-back").addEventListener("click",()=>{ capturarPaso(); if(paso>0)mostrarPaso(paso-1); });
+
+$$(".opt-big").forEach(b=>b.addEventListener("click",()=>{ perfil=b.dataset.p; DATOS={};RESP={};CONSENT=false; build(); $("#inicio").classList.add("oculto"); $("#form").classList.remove("oculto"); mostrarPaso(0); }));
+$("#cancelar").addEventListener("click",()=>{ if(confirm("¿Salir? Se perderá lo respondido.")){ DATOS={};RESP={};CONSENT=false; $("#form").classList.add("oculto"); $("#inicio").classList.remove("oculto"); perfil=null; scrollTo(0,0);} });
+$("#otra").addEventListener("click",()=>{ $("#gracias").classList.add("oculto"); $("#inicio").classList.remove("oculto"); perfil=null; scrollTo(0,0); });
+document.addEventListener("input",progreso); document.addEventListener("change",progreso);
+
+function enviar(){
+  capturarPaso();
+  const all=getR(); all.push({id:"r"+Date.now().toString(36),perfil,fecha:hoy(),datos:{...DATOS},resp:{...RESP}}); setR(all);
+  DATOS={};RESP={};CONSENT=false;
+  $("#form").classList.add("oculto"); $("#gracias").classList.remove("oculto"); scrollTo(0,0);
+}
 
 /* ===== PANEL ===== */
 $("#dot").addEventListener("click",()=>{const p=prompt("Clave del investigador:");if(p===null)return;if(p!==CONFIG.PASS){alert("Clave incorrecta.");return;}$$("#inicio,#form,#gracias").forEach(e=>e.classList.add("oculto"));$("#panel").classList.remove("oculto");pintar();scrollTo(0,0);});
@@ -386,19 +406,15 @@ function pintar(){
 function dl(n,c,t){const b=new Blob(["﻿"+c],{type:t});const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download=n;a.click();}
 function csv(rows){return rows.map(r=>r.map(c=>{const s=String(c==null?"":c);return /[",;\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s;}).join(";")).join("\n");}
 $("#e-vec").addEventListener("click",()=>{
-  const v=getR().filter(r=>r.perfil==="vecino");
-  const ids=A_GROUPS.flatMap(g=>g.items);
+  const v=getR().filter(r=>r.perfil==="vecino"); const ids=[A_G1,A_G2,A_G3].flatMap(g=>g.items);
   const head=["id","fecha","nombre","dni","correo","zona","condicion","anios","edad","genero","vivienda",...ids.map(it=>"P"+it[0]),...ids.filter(it=>it[2]).map(it=>"P"+it[0]+"_rec")];
-  const rows=[head];
-  v.forEach(r=>{const d=r.datos,q=r.resp;rows.push([r.id,r.fecha,d.nombre,d.dni,d.correo,d.zona,d.cond,d.anios,d.edad,d.genero,d.vivienda,...ids.map(it=>q["q_"+it[0]]),...ids.filter(it=>it[2]).map(it=>{const x=q["q_"+it[0]];return x===""?"":6-x;})]);});
+  const rows=[head]; v.forEach(r=>{const d=r.datos,q=r.resp;rows.push([r.id,r.fecha,d.nombre,d.dni,d.correo,d.zona,d.cond,d.anios,d.edad,d.genero,d.vivienda,...ids.map(it=>q["q_"+it[0]]),...ids.filter(it=>it[2]).map(it=>{const x=q["q_"+it[0]];return x===""||x==null?"":6-x;})]);});
   dl(`vecinos_${v.length}.csv`,csv(rows),"text/csv");
 });
 $("#e-inm").addEventListener("click",()=>{
-  const v=getR().filter(r=>r.perfil==="inmobiliaria");
-  const ids=B_GROUPS.flatMap(g=>g.items);
+  const v=getR().filter(r=>r.perfil==="inmobiliaria"); const ids=[B_G1,B_G2,B_G3,B_GEN].flatMap(g=>g.items);
   const head=["id","fecha","nombre","dni","correo","empresa","rol","experiencia","n_proyectos","tipo_proyectos",...ids.map(it=>"P"+it[0]),"pregunta_abierta"];
-  const rows=[head];
-  v.forEach(r=>{const d=r.datos,q=r.resp;rows.push([r.id,r.fecha,d.nombre,d.dni,d.correo,d.empresa,d.rol,d.exp,d.nproy,d.tipo,...ids.map(it=>q["q_"+it[0]]),q["q_PA"]||""]);});
+  const rows=[head]; v.forEach(r=>{const d=r.datos,q=r.resp;rows.push([r.id,r.fecha,d.nombre,d.dni,d.correo,d.empresa,d.rol,d.exp,d.nproy,d.tipo,...ids.map(it=>q["q_"+it[0]]),q["q_PA"]||""]);});
   dl(`inmobiliarias_${v.length}.csv`,csv(rows),"text/csv");
 });
 $("#e-json").addEventListener("click",()=>dl(`respaldo_${new Date().toISOString().slice(0,10)}.json`,JSON.stringify(getR(),null,2),"application/json"));
