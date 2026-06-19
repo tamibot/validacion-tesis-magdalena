@@ -287,9 +287,9 @@ const B_G3={titulo:"Transparencia e institución", scale:ESC, items:[
  [12,"La municipalidad rinde cuentas públicamente sobre sus decisiones en materia de aprobación de edificaciones en altura."],
 ]};
 const B_GEN={titulo:"Valoración general", scale:ESG, items:[
- ["G","En términos generales, ¿cómo califica la gestión municipal de Magdalena del Mar respecto a la aprobación y control de edificaciones en altura (2007–2025)?"],
+ ["G","En términos generales, ¿cómo califica la gestión municipal de la Municipalidad de Magdalena del Mar respecto al proceso de aprobación y control de edificaciones en altura durante el periodo 2007-2025?"],
 ]};
-const B_ABIERTA="En su opinión, ¿cuáles son los principales aspectos positivos y negativos de la regulación municipal de la altura edificatoria en Magdalena del Mar (2007–2025)? ¿Qué cambios consideraría necesarios?";
+const B_ABIERTA="En su opinión, ¿cuáles son los principales aspectos positivos y negativos de la regulación municipal de la altura edificatoria en Magdalena del Mar durante el periodo 2007-2025? ¿Qué cambios consideraría necesarios?";
 
 let perfil=null, paso=0, PAGES=[], DATOS={}, RESP={}, CONSENT=false;
 
@@ -397,7 +397,10 @@ $("#salir").addEventListener("click",()=>{$("#panel").classList.add("oculto");$(
 function pintar(){
   const all=getR(), vec=all.filter(r=>r.perfil==="vecino"), inm=all.filter(r=>r.perfil==="inmobiliaria");
   $("#kpis").innerHTML=[[all.length,"Respuestas"],[vec.length,"Vecinos"],[inm.length,"Inmobiliarias"]].map(k=>`<div class="kpi"><div class="v">${k[0]}</div><div class="l">${k[1]}</div></div>`).join("");
-  $("#lista").innerHTML=all.length?all.slice().reverse().map(r=>`<div style="border-bottom:1px solid var(--line);padding:9px 0"><b>${esc(r.datos.nombre||"—")}</b> · ${r.perfil} <span style="color:var(--muted)">(${esc(r.fecha)})</span></div>`).join(""):'<div style="color:var(--muted)">Sin respuestas en este dispositivo.</div>';
+  const cuota=r=>{ if(/antes/i.test(r.datos.cond||"")) return "E3"; const a=parseFloat(r.datos.anios); return (!isNaN(a)&&a>=10)?"E1":"E2"; };
+  const e1=vec.filter(r=>cuota(r)==="E1").length,e2=vec.filter(r=>cuota(r)==="E2").length,e3=vec.filter(r=>cuota(r)==="E3").length;
+  const cuotasHtml=`<div style="background:var(--card);border:1px solid var(--line);border-radius:var(--r-s);padding:13px;margin-bottom:12px;font-size:13px;line-height:1.7"><b>Cuotas de la muestra (tesis)</b><br>Vecinos · meta n=127 — E1 (10+ años): <b>${e1}</b>/76 · E2 (2–9 años): <b>${e2}</b>/23 · E3 (exresidentes): <b>${e3}</b>/28<br>Inmobiliarias · meta n=15–25: <b>${inm.length}</b></div>`;
+  $("#lista").innerHTML=cuotasHtml+(all.length?all.slice().reverse().map(r=>`<div style="border-bottom:1px solid var(--line);padding:9px 0"><b>${esc(r.datos.nombre||"—")}</b> · ${r.perfil}${r.perfil==="vecino"?" · "+cuota(r):""} <span style="color:var(--muted)">(${esc(r.fecha)})</span></div>`).join(""):'<div style="color:var(--muted)">Sin respuestas en este dispositivo.</div>');
 }
 function dl(n,c,t){const b=new Blob(["﻿"+c],{type:t});const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download=n;a.click();}
 function csv(rows){return rows.map(r=>r.map(c=>{const s=String(c==null?"":c);return /[",;\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s;}).join(";")).join("\n");}
