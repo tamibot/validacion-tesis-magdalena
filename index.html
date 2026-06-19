@@ -369,11 +369,7 @@ function mostrarPaso(i){
   window.scrollTo({top:0,behavior:"instant"});
 }
 function validarPaso(){
-  const page=$("#wizard"); let falta=0, primero=null;
-  page.querySelectorAll("[data-d]").forEach(f=>{ if(f.dataset.req!=="1")return; const k=f.dataset.d; const el=f.querySelector(`[name="d_${k}"]`); let ok = el.type==="radio" ? !!f.querySelector(":checked") : el.value.trim()!==""; if(!ok){falta++;f.classList.add("miss");primero=primero||f;} else f.classList.remove("miss"); });
-  page.querySelectorAll(".qrow").forEach(q=>{ if(q.dataset.opt)return; const ok=!!q.querySelector("input:checked"); if(!ok){falta++;q.classList.add("miss");primero=primero||q;} else q.classList.remove("miss"); });
-  if(PAGES[paso].final){ const c=$("#consent-l"); if(!$("#consent").checked){falta++;c.classList.add("miss");primero=primero||c;} else c.classList.remove("miss"); }
-  if(falta){ $("#aviso").textContent=`Faltan ${falta} respuesta(s) en este paso.`; (primero||page).scrollIntoView({behavior:"smooth",block:"center"}); return false; }
+  /* MODO PRUEBA: nada es obligatorio, se puede avanzar/enviar siempre */
   $("#aviso").textContent=""; return true;
 }
 $("#btn-next").addEventListener("click",()=>{
