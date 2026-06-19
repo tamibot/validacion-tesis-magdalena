@@ -3,261 +3,197 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<title>Validación de instrumentos · Tesis doctoral · Magdalena del Mar</title>
-<meta name="description" content="Validación por juicio de expertos — Gestión municipal de la altura edificatoria y calidad de vida urbana, Magdalena del Mar 2007–2025." />
+<title>Revisión de los cuestionarios · Tesis UNMSM</title>
+<meta name="description" content="Revisión de cuestionarios por expertos — Tesis doctoral, Magdalena del Mar." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#F7F3EC; --surface:#FFFFFF; --surface-2:#FBF8F2;
-    --ink:#19302C; --ink-2:#465A55; --muted:#7A8A85; --line:#E6DFD2; --line-2:#D8CFBE;
-    --teal:#0F5E57; --teal-700:#0B4943; --teal-50:#E4EFEC; --teal-100:#CFE4DF;
-    --clay:#BC5A37; --clay-600:#A44A2B; --clay-50:#F8E9E1;
-    --ok:#2C7A57; --ok-50:#E5F1EB; --danger:#A6402B;
-    --serif:"Fraunces",Georgia,serif; --sans:"Hanken Grotesk",system-ui,-apple-system,sans-serif;
-    --r:14px; --r-s:10px;
+    --bg:#F4F6F9; --card:#FFFFFF; --ink:#1A1F26; --ink-2:#3D4651; --muted:#697480; --line:#E6E9ee; --line-2:#D4DAE1;
+    --brand:#2563EB; --brand-d:#1D4FD0; --brand-50:#EAF1FE; --brand-100:#D6E4FD;
+    --ok:#15924C; --ok-50:#E8F6EE; --wa:#1FA855; --danger:#C23B22; --danger-50:#FBEEEA;
+    --f:"Plus Jakarta Sans",system-ui,-apple-system,sans-serif;
+    --r:14px; --r-s:11px;
   }
   *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
   html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;
-    background-image:radial-gradient(circle at 12% -8%, #ECF4F1 0, rgba(236,244,241,0) 42%);background-attachment:fixed}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f);font-size:16px;line-height:1.55}
   .oculto{display:none !important}
-  .wrap{max-width:660px;margin:0 auto;padding:0 18px}
-  a{color:var(--teal-700)}
-  ::selection{background:var(--clay-50)}
+  .wrap{max-width:600px;margin:0 auto;padding:0 16px}
+  a{color:var(--brand-d)}
 
-  @keyframes up{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
-  .rise{opacity:0;animation:up .6s cubic-bezier(.2,.7,.2,1) forwards}
-  .d1{animation-delay:.05s}.d2{animation-delay:.12s}.d3{animation-delay:.2s}.d4{animation-delay:.28s}
+  .top{background:var(--card);border-bottom:1px solid var(--line)}
+  .top .in{max-width:600px;margin:0 auto;padding:11px 16px;display:flex;align-items:center;justify-content:space-between}
+  .top .lbl{font-size:13px;font-weight:600;color:var(--muted)}
+  .dot{width:30px;height:30px;border:1px solid var(--line-2);border-radius:50%;background:#fff;color:#aeb6bf;cursor:pointer;font-size:13px}
 
-  /* barra */
-  .top{position:sticky;top:0;z-index:30;background:rgba(247,243,236,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  .top .in{max-width:660px;margin:0 auto;padding:9px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px}
-  .brand{display:flex;align-items:center;gap:9px;min-width:0}
-  .mark{flex:0 0 auto;width:30px;height:30px;border-radius:8px;background:var(--teal);display:grid;place-items:center}
-  .mark svg{display:block}
-  .brand .nm{font-family:var(--serif);font-weight:600;font-size:14px;color:var(--teal-700);line-height:1.05;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .brand .nm small{display:block;font-family:var(--sans);font-weight:500;font-size:10.5px;letter-spacing:.04em;color:var(--muted);text-transform:uppercase}
-  .iconbtn{flex:0 0 auto;width:30px;height:30px;border:1px solid var(--line-2);border-radius:50%;background:#fff;color:var(--muted);cursor:pointer;font-size:13px;display:grid;place-items:center}
+  header.hd{padding:26px 0 6px}
+  .pill-tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.02em;color:var(--brand-d);background:var(--brand-50);border-radius:999px;padding:5px 13px}
+  header.hd h1{font-size:clamp(24px,6.4vw,30px);font-weight:700;line-height:1.2;letter-spacing:-.02em;color:var(--ink);margin:14px 0 0}
+  header.hd .intro{font-size:16px;color:var(--ink-2);margin:12px 0 0;line-height:1.5}
+  header.hd .intro b{color:var(--ink);font-weight:600}
 
-  /* header */
-  header.hd{padding:30px 0 8px}
-  .tag{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--clay-600);background:var(--clay-50);border-radius:999px;padding:5px 12px}
-  header.hd h1{font-family:var(--serif);font-weight:600;font-size:clamp(25px,6.6vw,34px);line-height:1.12;letter-spacing:-.01em;color:var(--ink);margin:14px 0 0;text-wrap:balance}
-  header.hd .place{font-size:14.5px;color:var(--ink-2);margin-top:10px;display:flex;align-items:center;gap:7px}
-  .intro{font-size:16.5px;color:var(--ink-2);margin:16px 0 4px;line-height:1.55}
-  .intro b{color:var(--ink);font-weight:600}
+  .prog{position:sticky;top:0;z-index:20;background:var(--bg);padding:14px 0 10px;margin-top:18px}
+  .prog .l{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-bottom:7px;font-weight:500}
+  .prog .l b{color:var(--brand-d);font-weight:700}
+  .track{height:9px;background:var(--line);border-radius:999px;overflow:hidden}
+  .track i{display:block;height:100%;width:0;background:var(--brand);border-radius:999px;transition:width .3s ease}
 
-  /* progreso */
-  .prog{position:sticky;top:49px;z-index:20;background:var(--paper);padding:12px 0 9px;margin-top:18px;border-bottom:1px solid var(--line)}
-  .prog .lab{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--ink-2);margin-bottom:7px}
-  .prog .lab b{color:var(--teal-700);font-weight:600}
-  .track{height:8px;background:var(--line);border-radius:999px;overflow:hidden}
-  .track i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--teal),#1B8A7E);border-radius:999px;transition:width .35s cubic-bezier(.2,.7,.2,1)}
+  .step{margin-top:26px}
+  .sh{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+  .sh .no{flex:0 0 auto;width:32px;height:32px;border-radius:50%;background:var(--brand);color:#fff;font-weight:700;font-size:16px;display:grid;place-items:center}
+  .sh h2{font-size:20px;font-weight:700;color:var(--ink);margin:0;letter-spacing:-.01em}
+  .sh .s{font-size:13.5px;color:var(--muted);margin-top:2px}
 
-  /* pasos */
-  .step{margin-top:30px}
-  .step-h{display:flex;align-items:center;gap:12px;margin-bottom:4px}
-  .step-h .no{flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:var(--teal);color:#fff;font-family:var(--serif);font-weight:600;font-size:15px;display:grid;place-items:center}
-  .step-h h2{font-family:var(--serif);font-weight:600;font-size:20px;color:var(--ink);margin:0;letter-spacing:-.01em}
-  .step-h .sub{font-size:13px;color:var(--muted);margin-top:1px}
-  .step-h .grow{flex:1}
+  /* encuestas */
+  details.enc{background:var(--card);border:1px solid var(--line);border-radius:var(--r);margin-bottom:11px;overflow:hidden}
+  details.enc[open]{border-color:var(--brand-100)}
+  summary{cursor:pointer;list-style:none;padding:16px;display:flex;align-items:center;gap:13px}
+  summary::-webkit-details-marker{display:none}
+  .enc .ic{flex:0 0 auto;width:42px;height:42px;border-radius:11px;background:var(--brand-50);display:grid;place-items:center;font-size:21px}
+  .enc .ti{flex:1;min-width:0}
+  .enc .ti b{display:block;font-size:16px;font-weight:700;color:var(--ink)}
+  .enc .ti span{font-size:13px;color:var(--muted)}
+  .enc .chev{flex:0 0 auto;color:var(--muted);transition:transform .2s;font-size:18px}
+  details.enc[open] .chev{transform:rotate(180deg);color:var(--brand)}
+  .enc-body{padding:4px 16px 16px;border-top:1px solid var(--line)}
+  .dim{font-size:12px;font-weight:700;color:var(--brand-d);margin:16px 0 6px;text-transform:uppercase;letter-spacing:.03em}
+  .q-item{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--ink-2);line-height:1.45}
+  .q-item:last-child{border-bottom:none}
+  .q-item .n{flex:0 0 24px;color:var(--brand);font-weight:700}
 
-  /* desplegables instrumentos */
-  details.inst{border:1px solid var(--line);border-radius:var(--r);margin-top:12px;background:var(--surface);overflow:hidden;transition:border-color .15s}
-  details.inst[open]{border-color:var(--teal-100)}
-  details.inst summary{cursor:pointer;list-style:none;padding:16px 17px;display:flex;align-items:center;gap:13px}
-  details.inst summary::-webkit-details-marker{display:none}
-  .ic{flex:0 0 auto;width:38px;height:38px;border-radius:10px;background:var(--teal-50);color:var(--teal);display:grid;place-items:center}
-  details.inst summary .ti{flex:1;min-width:0}
-  details.inst summary .ti b{display:block;font-family:var(--serif);font-weight:600;font-size:15.5px;color:var(--ink)}
-  details.inst summary .ti span{font-size:12.5px;color:var(--muted)}
-  details.inst summary .chev{flex:0 0 auto;color:var(--muted);transition:transform .2s}
-  details.inst[open] summary .chev{transform:rotate(180deg);color:var(--teal)}
-  .body{padding:2px 17px 16px;border-top:1px solid var(--line)}
-  .dim{font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--teal-700);font-weight:700;margin:16px 0 6px}
-  .row{display:flex;gap:10px;padding:7px 0;border-bottom:1px solid var(--line);font-size:14px;color:var(--ink-2);line-height:1.5}
-  .row:last-child{border-bottom:none}
-  .row .n{flex:0 0 24px;color:var(--clay);font-weight:600}
-
-  /* criterios */
-  .crit{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:15px 16px;margin-top:11px}
-  .crit .q{display:flex;justify-content:space-between;gap:12px;align-items:baseline;margin-bottom:11px}
-  .crit .q b{font-size:16px;font-weight:600;color:var(--ink)}
-  .crit .q small{font-size:12.5px;color:var(--muted);text-align:right;flex:0 0 auto;max-width:48%}
-  .scale{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+  /* criterios = preguntas */
+  .crit{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:11px}
+  .crit .qq{font-size:16.5px;font-weight:600;color:var(--ink);line-height:1.35}
+  .crit .tagc{display:inline-block;font-size:12px;font-weight:600;color:var(--muted);background:var(--bg);border-radius:6px;padding:2px 9px;margin-top:8px}
+  .scale{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px}
   .scale label{cursor:pointer;position:relative}
   .scale input{position:absolute;opacity:0;inset:0;margin:0}
-  .scale .opt{border:1.5px solid var(--line-2);border-radius:var(--r-s);padding:9px 4px;text-align:center;transition:.13s;background:#fff}
-  .scale .opt .nn{display:block;font-family:var(--serif);font-weight:600;font-size:18px;color:var(--teal-700);line-height:1}
-  .scale .opt .ll{display:block;font-size:11px;color:var(--muted);margin-top:3px}
-  .scale label:hover .opt{border-color:var(--teal)}
-  .scale input:checked + .opt{background:var(--teal);border-color:var(--teal)}
+  .scale .opt{border:1.5px solid var(--line-2);border-radius:var(--r-s);padding:11px 3px;text-align:center;background:#fff;transition:.12s;min-height:62px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px}
+  .scale .opt .nn{font-size:20px;font-weight:700;color:var(--ink-2);line-height:1}
+  .scale .opt .ll{font-size:11.5px;color:var(--muted);line-height:1.1}
+  .scale label:hover .opt{border-color:var(--brand)}
+  .scale input:checked + .opt{background:var(--brand);border-color:var(--brand)}
   .scale input:checked + .opt .nn,.scale input:checked + .opt .ll{color:#fff}
-  .scale input:focus-visible + .opt{box-shadow:0 0 0 3px var(--teal-100)}
 
-  /* campos */
-  .fcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:6px 16px 16px;margin-top:12px}
-  .field{padding-top:16px}
-  .field > label{display:block;font-size:14px;font-weight:600;color:var(--ink);margin-bottom:9px}
-  .req{color:var(--clay)}
-  .opt-list{display:grid;gap:8px}
-  .opt-list label{display:flex;gap:11px;align-items:flex-start;border:1.5px solid var(--line-2);border-radius:var(--r-s);padding:12px 13px;cursor:pointer;font-size:14.5px;transition:.13s;background:#fff}
-  .opt-list label:hover{border-color:var(--teal)}
-  .opt-list label:has(input:checked){border-color:var(--teal);background:var(--teal-50)}
-  .opt-list input{margin-top:2px;width:18px;height:18px;accent-color:var(--teal);flex:0 0 auto}
-  input[type=text],textarea{font:inherit;width:100%;color:var(--ink);border:1.5px solid var(--line-2);border-radius:var(--r-s);padding:12px 13px;background:#fff}
-  input::placeholder,textarea::placeholder{color:#9aa8a3}
-  input:focus,textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-50)}
-  textarea{min-height:100px;resize:vertical}
-  .stack{display:grid;gap:10px}
-  .firm{display:flex;gap:11px;align-items:flex-start;font-size:14px;color:var(--ink-2);cursor:pointer}
-  .firm input{width:20px;height:20px;accent-color:var(--teal);flex:0 0 auto;margin-top:1px}
-  .miss{outline:2px solid #E2B6A8;outline-offset:1px}
-  .miss-card{border-color:#E2B6A8 !important;background:#fdf3ef}
+  /* paso 3 */
+  .fcard{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:4px 16px 18px}
+  .field{padding-top:18px}
+  .field > label{display:block;font-size:15px;font-weight:700;color:var(--ink);margin-bottom:10px}
+  .req{color:var(--danger)}
+  .opt-list{display:grid;gap:9px}
+  .opt-list label{display:flex;gap:12px;align-items:center;border:1.5px solid var(--line-2);border-radius:var(--r-s);padding:14px;cursor:pointer;transition:.12s;background:#fff}
+  .opt-list label:hover{border-color:var(--brand)}
+  .opt-list label:has(input:checked){border-color:var(--brand);background:var(--brand-50)}
+  .opt-list input{width:20px;height:20px;accent-color:var(--brand);flex:0 0 auto}
+  .opt-list .ot b{display:block;font-size:15px;font-weight:600;color:var(--ink)}
+  .opt-list .ot span{font-size:12.5px;color:var(--muted)}
+  input[type=text],textarea{font:inherit;width:100%;color:var(--ink);border:1.5px solid var(--line-2);border-radius:var(--r-s);padding:13px;background:#fff}
+  input::placeholder,textarea::placeholder{color:#9aa3ad}
+  input:focus,textarea:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-50)}
+  textarea{min-height:90px;resize:vertical}
+  .stack{display:grid;gap:11px}
+  .firm{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;color:var(--ink-2);cursor:pointer}
+  .firm input{width:22px;height:22px;accent-color:var(--brand);flex:0 0 auto;margin-top:1px}
+  .miss{outline:2px solid #E7B0A2;outline-offset:1px}
+  .miss-card{border-color:#E7B0A2 !important;background:var(--danger-50)}
 
-  /* CTA */
-  .cta-wrap{margin-top:26px}
-  .aviso{font-size:13.5px;color:var(--danger);min-height:20px;margin-bottom:8px;text-align:center}
-  .btn{font:inherit;font-weight:600;font-size:16.5px;border:none;border-radius:12px;padding:16px;cursor:pointer;width:100%;display:flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;transition:.15s}
-  .btn.pri{background:var(--clay);color:#fff;box-shadow:0 6px 18px -8px rgba(188,90,55,.6)}
-  .btn.pri:hover{background:var(--clay-600)}
-  .btn.pri:active{transform:translateY(1px)}
-  .btn.gho{background:#fff;color:var(--teal-700);border:1.5px solid var(--line-2)}
-  .btn.gho:hover{border-color:var(--teal)}
-  .btn.wa{background:#1FA855;color:#fff}
-  .btn.sec{background:var(--teal);color:#fff}
+  /* botones */
+  .cta{margin-top:24px}
+  .aviso{font-size:14px;color:var(--danger);min-height:20px;margin-bottom:10px;text-align:center;font-weight:500}
+  .btn{font:inherit;font-weight:700;font-size:17px;border:none;border-radius:13px;padding:17px;cursor:pointer;width:100%;display:flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;transition:background .15s}
+  .btn-primary{background:var(--brand);color:#fff}
+  .btn-primary:hover{background:var(--brand-d)}
+  .btn-primary:active{background:var(--brand-d)}
+  .btn-wa{background:var(--wa);color:#fff}
+  .btn-ghost{background:#fff;color:var(--ink);border:1.5px solid var(--line-2)}
 
   /* resultado */
-  .res{background:var(--surface);border:1px solid var(--teal-100);border-radius:18px;padding:30px 20px;text-align:center}
-  .res .ck{width:60px;height:60px;border-radius:50%;background:var(--ok-50);color:var(--ok);display:grid;place-items:center;margin:0 auto 12px}
-  .res h3{font-family:var(--serif);font-weight:600;font-size:23px;color:var(--ink);margin:0 0 6px}
+  .res{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:32px 20px;text-align:center}
+  .res .ck{width:66px;height:66px;border-radius:50%;background:var(--ok-50);color:var(--ok);display:grid;place-items:center;margin:0 auto 14px}
+  .res h2{font-size:24px;font-weight:700;color:var(--ink);margin:0 0 6px}
   .res p{font-size:15px;color:var(--ink-2);margin:0 0 16px}
-  .res .pill{display:inline-block;background:var(--teal-50);color:var(--teal-700);font-weight:600;font-size:13px;padding:6px 13px;border-radius:999px;margin-bottom:16px}
-  .res textarea{font-size:12.5px;text-align:left;min-height:120px;background:var(--surface-2);margin-bottom:14px}
-  .res .acc{display:grid;gap:10px}
+  .res .badge{display:inline-block;background:var(--brand-50);color:var(--brand-d);font-weight:700;font-size:13.5px;padding:8px 15px;border-radius:999px;margin-bottom:18px}
+  .res textarea{font-size:13px;text-align:left;min-height:120px;background:var(--bg);margin-bottom:14px}
+  .res .acc{display:grid;gap:11px}
 
-  /* ficha técnica al final */
-  .tecnica{margin-top:34px;border-top:1px solid var(--line);padding-top:8px}
-  details.mini summary{cursor:pointer;list-style:none;padding:14px 2px;font-size:14px;color:var(--ink-2);display:flex;align-items:center;gap:9px;font-weight:500}
-  details.mini summary::-webkit-details-marker{display:none}
-  details.mini summary .chev{margin-left:auto;color:var(--muted);transition:transform .2s}
-  details.mini[open] summary .chev{transform:rotate(180deg)}
-  details.mini .mbody{padding:2px 2px 14px;font-size:14px;color:var(--ink-2)}
-  details.mini .mbody p{margin:0 0 10px}
-  details.mini .mbody .k{color:var(--teal-700);font-weight:600}
-
-  footer{margin-top:30px;border-top:1px solid var(--line);padding:20px 0 40px;text-align:center;font-size:12.5px;color:var(--muted);line-height:1.7}
+  /* footer + logo */
+  footer{margin-top:40px;border-top:1px solid var(--line);padding:28px 0 44px;text-align:center}
+  footer img{width:62px;height:auto;opacity:.95;margin-bottom:12px}
+  footer .ft{font-size:12.5px;color:var(--muted);line-height:1.7}
 
   /* panel */
-  .kpis{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px;margin:14px 0}
-  .kpi{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-s);padding:13px}
-  .kpi .v{font-family:var(--serif);font-weight:600;font-size:23px;color:var(--teal-700)}
-  .kpi .l{font-size:11.5px;color:var(--muted)}
+  .kpis{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:14px 0}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:var(--r-s);padding:14px}
+  .kpi .v{font-size:24px;font-weight:700;color:var(--brand-d)}
+  .kpi .l{font-size:12px;color:var(--muted)}
 
-  @media (max-width:430px){
-    .crit .q{flex-direction:column;gap:4px} .crit .q small{max-width:none;text-align:left}
-    .scale .opt{padding:10px 2px}
-  }
-  @media print{.top,.prog,.cta-wrap,.no-print{display:none!important}body{background:#fff}details .body{display:block}}
+  @media (max-width:400px){ .scale .opt{padding:10px 2px;min-height:58px} }
+  @media print{.top,.prog,.cta,.no-print{display:none!important}details .enc-body{display:block}}
 </style>
 </head>
 <body>
 
-<div class="top">
-  <div class="in">
-    <div class="brand">
-      <span class="mark"><svg width="17" height="17" viewBox="0 0 17 17" fill="none"><rect x="1" y="9" width="3.4" height="7" rx="1" fill="#CFE4DF"/><rect x="6.8" y="5" width="3.4" height="11" rx="1" fill="#fff"/><rect x="12.6" y="1.5" width="3.4" height="14.5" rx="1" fill="#7FD3C7"/></svg></span>
-      <span class="nm">Validación de instrumentos<small>Tesis doctoral · UNMSM</small></span>
-    </div>
-    <button class="iconbtn" id="dot" title="Acceso del investigador" aria-label="Investigador">●</button>
-  </div>
-</div>
+<div class="top"><div class="in"><span class="lbl">Revisión de cuestionarios · Tesis UNMSM</span><button class="dot" id="dot" aria-label="Investigador">●</button></div></div>
 
 <div id="vista">
 <div class="wrap">
 
   <header class="hd">
-    <span class="tag rise d1">Juicio de expertos</span>
-    <h1 class="rise d2">Gestión de la altura edificatoria y calidad de vida urbana</h1>
-    <div class="place rise d3">Magdalena del Mar · 2007–2025</div>
-    <p class="intro rise d4">Revise los dos cuestionarios de esta tesis y emita su <b>dictamen</b>. Le tomará unos 10 minutos.</p>
+    <span class="pill-tag">Para expertos</span>
+    <h1>Revise los cuestionarios de esta tesis</h1>
+    <p class="intro">Esta tesis aplicará <b>2 encuestas</b> en Magdalena del Mar. Antes de usarlas con las personas, queremos su opinión de experto: <b>¿las preguntas están bien hechas?</b> Le tomará unos 10 minutos.</p>
   </header>
 
-  <div class="prog rise d4">
-    <div class="lab"><span>Su validación</span><span><b id="pg-n">0</b> de 12 listo</span></div>
+  <div class="prog">
+    <div class="l"><span>Avance</span><span><b id="pg-n">0</b> de 12 completado</span></div>
     <div class="track"><i id="pg-bar"></i></div>
   </div>
 
-  <!-- PASO 1 -->
+  <!-- 1 -->
   <div class="step">
-    <div class="step-h">
-      <span class="no">1</span>
-      <div class="grow"><h2>Revise los instrumentos</h2><div class="sub">Toque cada uno para ver sus ítems</div></div>
-    </div>
-    <div id="insts"></div>
+    <div class="sh"><span class="no">1</span><div><h2>Lea las encuestas</h2><div class="s">Toque cada una para ver las preguntas</div></div></div>
+    <div id="encs"></div>
   </div>
 
-  <!-- PASO 2 -->
+  <!-- 2 -->
   <div class="step">
-    <div class="step-h">
-      <span class="no">2</span>
-      <div class="grow"><h2>Califique los criterios</h2><div class="sub">1 deficiente · 2 aceptable · 3 bueno · 4 excelente</div></div>
-    </div>
+    <div class="sh"><span class="no">2</span><div><h2>Califique las preguntas</h2><div class="s">Del 1 (malo) al 4 (excelente)</div></div></div>
     <div id="crits"></div>
   </div>
 
-  <!-- PASO 3 -->
+  <!-- 3 -->
   <div class="step">
-    <div class="step-h">
-      <span class="no">3</span>
-      <div class="grow"><h2>Dictamen y firma</h2><div class="sub">Su conclusión y sus datos</div></div>
-    </div>
-
+    <div class="sh"><span class="no">3</span><div><h2>Su conclusión</h2><div class="s">Su veredicto, comentarios y datos</div></div></div>
     <div class="fcard">
       <div class="field">
-        <label>Dictamen general <span class="req">*</span></label>
+        <label>En general, ¿las encuestas sirven? <span class="req">*</span></label>
         <div class="opt-list" id="dic">
-          <label><input type="radio" name="dic" value="Aplicable sin observaciones"><span>Aplicable sin observaciones</span></label>
-          <label><input type="radio" name="dic" value="Aplicable con observaciones menores"><span>Aplicable con observaciones menores</span></label>
-          <label><input type="radio" name="dic" value="Aplicable con observaciones sustanciales"><span>Aplicable con observaciones sustanciales</span></label>
-          <label><input type="radio" name="dic" value="No aplicable"><span>No aplicable</span></label>
+          <label><input type="radio" name="dic" value="Aplicable sin observaciones"><span class="ot"><b>Sí, están listas</b><span>Aplicable sin observaciones</span></span></label>
+          <label><input type="radio" name="dic" value="Aplicable con observaciones menores"><span class="ot"><b>Sí, con pequeños ajustes</b><span>Aplicable con observaciones menores</span></span></label>
+          <label><input type="radio" name="dic" value="Aplicable con observaciones sustanciales"><span class="ot"><b>Sí, pero necesitan cambios importantes</b><span>Aplicable con observaciones sustanciales</span></span></label>
+          <label><input type="radio" name="dic" value="No aplicable"><span class="ot"><b>No sirven así</b><span>No aplicable</span></span></label>
         </div>
       </div>
-      <div class="field"><label for="obs">Observaciones y mejoras <span style="color:var(--muted);font-weight:400">(opcional)</span></label><textarea id="obs" placeholder="Comentarios sobre ítems, dimensiones o el instrumento en su conjunto…"></textarea></div>
+      <div class="field"><label>Comentarios o mejoras <span style="color:var(--muted);font-weight:500">(opcional)</span></label><textarea id="obs" placeholder="¿Cambiaría alguna pregunta? Escríbalo aquí…"></textarea></div>
       <div class="field"><label>Sus datos <span class="req">*</span></label>
         <div class="stack">
-          <input type="text" id="f_nom" placeholder="Nombres y apellidos">
-          <input type="text" id="f_gra" placeholder="Grado y especialidad — Dr. Arq., Mg. …">
-          <input type="text" id="f_ins" placeholder="Institución y cargo">
+          <input type="text" id="f_nom" placeholder="Nombre completo">
+          <input type="text" id="f_gra" placeholder="Profesión o especialidad (Dr. Arq., Mg. …)">
+          <input type="text" id="f_ins" placeholder="Dónde trabaja (institución y cargo)">
         </div>
       </div>
-      <div class="field"><label class="firm"><input type="checkbox" id="f_fir"><span>Mi nombre vale como <b>firma digital</b> y autorizo el uso académico de esta evaluación. <span class="req">*</span></span></label></div>
+      <div class="field"><label class="firm"><input type="checkbox" id="f_fir"><span>Confirmo que esta es mi evaluación y autorizo su uso académico. <span class="req">*</span></span></label></div>
     </div>
   </div>
 
-  <div class="cta-wrap">
+  <div class="cta">
     <div class="aviso" id="aviso"></div>
-    <button class="btn pri" id="enviar">Enviar mi validación</button>
+    <button class="btn btn-primary" id="enviar">Enviar mi revisión</button>
   </div>
 
-  <!-- resultado -->
-  <div id="res-box" class="oculto" style="margin-top:24px"></div>
-
-  <!-- ficha técnica opcional -->
-  <div class="tecnica no-print">
-    <details class="mini">
-      <summary>Ficha técnica de la investigación <span class="chev">⌄</span></summary>
-      <div class="mbody">
-        <p><span class="k">Objetivo.</span> Determinar la relación entre la gestión municipal de la altura edificatoria y la calidad de vida urbana percibida en Magdalena del Mar (2007–2025).</p>
-        <p><span class="k">Modelo.</span> V1 Gestión de la altura (normativa · técnica/fiscalización · institucional · socio-urbana) → V2 Calidad de vida urbana (5 dimensiones).</p>
-        <p><span class="k">Método.</span> Enfoque cuantitativo, correlacional, no experimental · análisis PLS-SEM · técnica encuesta.</p>
-        <p><span class="k">Muestra.</span> Instrumento A: residentes y exresidentes, n = 127 · Instrumento B: sector inmobiliario, n = 15–25.</p>
-      </div>
-    </details>
-  </div>
-
+  <div id="res-box" class="oculto" style="margin-top:22px"></div>
 </div>
 </div>
 
@@ -265,22 +201,22 @@
 <div id="panel" class="oculto">
   <div class="wrap" style="padding-top:20px">
     <div style="display:flex;justify-content:space-between;align-items:center;gap:10px">
-      <h2 style="font-family:var(--serif);font-weight:600;margin:0;color:var(--teal-700)">Investigador</h2>
-      <button class="btn gho" style="width:auto;padding:9px 15px;font-size:14px" id="salir">← Volver</button>
+      <h2 style="margin:0;font-size:20px">Investigador</h2>
+      <button class="btn btn-ghost" style="width:auto;padding:10px 16px;font-size:14px" id="salir">← Volver</button>
     </div>
     <div class="kpis" id="kpis"></div>
     <div style="display:grid;gap:10px">
-      <button class="btn gho" id="e-csv">Exportar CSV de validaciones</button>
-      <button class="btn gho" id="e-json">Respaldo JSON</button>
-      <a class="btn gho" href="encuesta-participantes.html" style="width:auto;justify-content:center">Encuesta de participantes (A/B)</a>
+      <button class="btn btn-ghost" id="e-csv">Exportar CSV</button>
+      <button class="btn btn-ghost" id="e-json">Respaldo JSON</button>
+      <a class="btn btn-ghost" href="encuesta-participantes.html">Encuesta de participantes (A/B)</a>
     </div>
     <div id="lista" style="margin-top:14px;font-size:13.5px"></div>
   </div>
 </div>
 
-<footer class="wrap">
-  Universidad Nacional Mayor de San Marcos · Doctorado en Ciencias Administrativas<br>
-  Alfredo Martín Luna Briceño · 2026
+<footer>
+  <img src="unmsm-logo.png" alt="Universidad Nacional Mayor de San Marcos" onerror="this.style.display='none'">
+  <div class="ft">Universidad Nacional Mayor de San Marcos · Doctorado en Ciencias Administrativas<br>Tesis de Alfredo Martín Luna Briceño · 2026</div>
 </footer>
 
 <script>
@@ -292,36 +228,38 @@ function setV(v){try{localStorage.setItem(LS,JSON.stringify(v))}catch(e){}}
 const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));
 const hoy=()=>new Date().toLocaleDateString("es-PE");
 
-const CRIT=[["Claridad","Los ítems se entienden con facilidad"],["Pertinencia","Corresponden a variables y dimensiones"],["Coherencia","Objetivos, hipótesis e ítems concuerdan"],["Relevancia","Los indicadores miden lo importante"],["Suficiencia","Los ítems bastan por dimensión"],["Consistencia","La escala es adecuada para PLS-SEM"],["Aplicabilidad","Aplicables a Magdalena del Mar"]];
-const NIV=["Defic.","Acept.","Bueno","Excel."];
+/* 7 criterios como preguntas claras: [pregunta, nombre técnico] */
+const CRIT=[
+ ["¿Se entienden las preguntas con facilidad?","Claridad"],
+ ["¿Las preguntas miden lo que deben medir?","Pertinencia"],
+ ["¿Las preguntas concuerdan con los objetivos de la tesis?","Coherencia"],
+ ["¿Las preguntas son importantes para el tema?","Relevancia"],
+ ["¿Hay suficientes preguntas para cada tema?","Suficiencia"],
+ ["¿La escala de respuestas (1 a 5) es adecuada?","Consistencia metodológica"],
+ ["¿Las encuestas sirven para el caso de Magdalena del Mar?","Aplicabilidad"],
+];
+const NIV=["Malo","Regular","Bien","Excelente"];
 
-const A={t:"Instrumento A · Percepción ciudadana",m:"39 ítems + 4 generales · escala 1 a 5",d:[
- ["V1 · D1 Normativa",[[1,"La municipalidad comunica claramente las normas sobre altura edificatoria."],[2,"Las normas sobre altura buscan proteger la calidad urbana del distrito."],[3,"Los cambios normativos sobre altura son difundidos oportunamente."],[4,"La normativa es coherente con los planes de desarrollo urbano."]]],
- ["V1 · D2 Técnica y fiscalización",[[5,"Aplica criterios técnicos al aprobar edificios altos."],[6,"Evalúa la infraestructura urbana antes de aprobar edificaciones."],[7,"La densificación parece técnicamente planificada."],[8,"Fiscaliza adecuadamente las construcciones."],[9,"Los edificios respetan los parámetros aprobados."],[10,"Existe control efectivo del crecimiento urbano."]]],
- ["V1 · D3 Institucional",[[11,"Considera el bienestar de los vecinos en sus decisiones."],[12,"Escucha las preocupaciones vecinales sobre edificios altos."],[13,"Actúa con transparencia respecto a la verticalización."],[14,"Rinde cuentas sobre las aprobaciones de edificaciones."]]],
- ["V1 · D4 Socio-urbana",[[15,"La verticalización se integró adecuadamente al barrio."],[16,"El crecimiento mantiene equilibrio con la vida residencial."],[17,"Los nuevos edificios mantienen armonía con el entorno."],[18,"El crecimiento vertical preservó la identidad del barrio."]]],
- ["V2 · Bienestar físico",[[19,"Los edificios altos mejoraron la calidad urbana."],[20,"La verticalización redujo la tranquilidad del barrio."],[21,"El aumento de edificaciones generó saturación urbana."],[22,"La densificación afectó la privacidad entre viviendas."]]],
- ["V2 · Acceso y movilidad",[[23,"El crecimiento de edificios aumentó el tráfico."],[24,"La densificación dificultó el estacionamiento."],[25,"Los servicios urbanos crecieron con la población."],[26,"La infraestructura responde al crecimiento del distrito."]]],
- ["V2 · Entorno y ambiente",[[27,"El crecimiento vertical redujo los espacios libres."],[28,"Las áreas verdes son insuficientes frente a la densificación."],[29,"Los edificios altos afectan la ventilación natural."],[30,"El crecimiento aumentó los niveles de ruido."]]],
- ["V2 · Bienestar y satisfacción",[[31,"Me siento satisfecho viviendo en este sector."],[32,"La transformación urbana mejoró mi bienestar cotidiano."],[33,"El crecimiento urbano redujo la calidad de vida."],[34,"El distrito sigue siendo agradable pese a los edificios."],[35,"Me siento cómodo en el entorno urbano actual."]]],
- ["V2 · Cohesión e identidad",[[36,"La verticalización cambió la identidad del barrio."],[37,"El crecimiento urbano ha sido equilibrado."],[38,"La calidad urbana se mantuvo pese al crecimiento."],[39,"La verticalización debilitó los lazos entre vecinos."]]],
- ["Evaluación general (1 muy deficiente · 5 muy buena)",[["G1","Gestión normativa de la altura edificatoria."],["G2","Capacidad técnica y de fiscalización."],["G3","Relación con los vecinos sobre edificación."],["G4","Impacto del crecimiento vertical en la calidad de vida."]]],
+const ENC_A={t:"Encuesta para vecinos",m:"39 preguntas · cómo viven el crecimiento de edificios",ic:"🏠",d:[
+ ["Sobre cómo la municipalidad maneja la altura de los edificios",[[1,"La municipalidad comunica claramente las normas sobre altura."],[2,"Las normas buscan proteger la calidad del distrito."],[3,"Los cambios de normas se difunden a tiempo."],[4,"Las normas concuerdan con los planes del distrito."],[5,"Usa criterios técnicos al aprobar edificios altos."],[6,"Evalúa la infraestructura antes de aprobar."],[7,"La densificación parece bien planificada."],[8,"Fiscaliza bien las construcciones."],[9,"Los edificios respetan lo aprobado."],[10,"Hay control del crecimiento urbano."],[11,"Considera a los vecinos en sus decisiones."],[12,"Escucha las preocupaciones de los vecinos."],[13,"Actúa con transparencia."],[14,"Rinde cuentas de las aprobaciones."],[15,"La verticalización se integró bien al barrio."],[16,"El crecimiento mantiene equilibrio con la vida vecinal."],[17,"Los nuevos edificios armonizan con el entorno."],[18,"Se preservó la identidad del barrio."]]],
+ ["Sobre la calidad de vida en el distrito (19 a 39)",[[19,"Los edificios altos mejoraron la calidad urbana."],[20,"Bajó la tranquilidad del barrio."],[21,"Hay sensación de saturación."],[22,"Se afectó la privacidad entre viviendas."],[23,"Aumentó el tráfico."],[24,"Es más difícil estacionar."],[25,"Los servicios crecieron con la población."],[26,"La infraestructura responde al crecimiento."],[27,"Hay menos espacios libres."],[28,"Faltan áreas verdes."],[29,"Se afectó la ventilación."],[30,"Aumentó el ruido."],[31,"Estoy satisfecho viviendo aquí."],[32,"Mi bienestar diario mejoró."],[33,"Bajó la calidad de vida del distrito."],[34,"Sigue siendo agradable para vivir."],[35,"Me siento cómodo en el entorno actual."],[36,"Cambió la identidad del barrio."],[37,"El crecimiento ha sido equilibrado."],[38,"La calidad se mantuvo pese al crecimiento."],[39,"Se debilitaron los lazos entre vecinos."]]],
+ ["Valoración general (4 preguntas, escala 1 muy malo · 5 muy bueno)",[["G1","Gestión de las normas de altura."],["G2","Capacidad técnica y de fiscalización."],["G3","Relación con los vecinos."],["G4","Impacto del crecimiento en la calidad de vida."]]],
 ]};
-const B={t:"Instrumento B · Sector inmobiliario",m:"12 ítems + general + pregunta abierta",d:[
- ["D1 Normativa",[[1,"Los parámetros urbanísticos son claros y predecibles para aprobar proyectos."],[2,"Los cambios normativos se comunican con anticipación suficiente."],[3,"La normativa distrital es coherente con la planificación metropolitana (MML)."],[4,"Los requisitos para aprobar proyectos en altura son proporcionales y justificados."]]],
- ["D2 Técnica",[[5,"Los criterios técnicos de aprobación son consistentes y predecibles."],[6,"Se evalúa la infraestructura urbana antes de aprobar proyectos."],[7,"La fiscalización es efectiva y consistente con las licencias."],[8,"Los tiempos y procedimientos de licencias son razonables y eficientes."]]],
- ["D3 Institucional",[[9,"Actúa con transparencia al aprobar proyectos en altura."],[10,"Considera los impactos urbanos y vecinales al evaluar proyectos."],[11,"La coordinación distrital–MML en edificaciones es eficiente."],[12,"Rinde cuentas públicamente sobre sus decisiones de aprobación."]]],
- ["Cierre",[["G","Evaluación general de la gestión de aprobación y control (1 muy deficiente · 5 muy buena)."],["P.A.","Pregunta abierta: aspectos positivos, negativos y cambios necesarios."]]],
+const ENC_B={t:"Encuesta para inmobiliarias",m:"12 preguntas · trámites con la municipalidad",ic:"🏗️",d:[
+ ["Sobre normas y requisitos",[[1,"Los parámetros son claros y predecibles para aprobar proyectos."],[2,"Los cambios de normas se avisan con tiempo."],[3,"La norma distrital concuerda con la metropolitana (MML)."],[4,"Los requisitos son razonables y bien justificados."]]],
+ ["Sobre los trámites técnicos",[[5,"Los criterios técnicos son consistentes."],[6,"Se evalúa la infraestructura antes de aprobar."],[7,"La fiscalización es efectiva."],[8,"Los tiempos de licencias son razonables."]]],
+ ["Sobre la institución",[[9,"Hay transparencia al aprobar proyectos."],[10,"Se consideran los impactos vecinales."],[11,"La coordinación distrital–MML es eficiente."],[12,"Rinde cuentas de sus decisiones."]]],
+ ["Cierre",[["G","Valoración general de la gestión de aprobaciones (1 muy malo · 5 muy bueno)."],["P.A.","Pregunta abierta: qué está bien, qué está mal y qué cambiaría."]]],
 ]};
 
-function renderInst(I){
+function renderEnc(E){
   let b="";
-  I.d.forEach(g=>{ b+=`<div class="dim">${esc(g[0])}</div>`; g[1].forEach(it=>{ b+=`<div class="row"><span class="n">${esc(it[0])}</span><span>${esc(it[1])}</span></div>`; }); });
-  return `<details class="inst"><summary><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z"/><path d="M9 9h1M9 13h6M9 17h6"/></svg></span><span class="ti"><b>${esc(I.t)}</b><span>${esc(I.m)}</span></span><span class="chev">⌄</span></summary><div class="body">${b}</div></details>`;
+  E.d.forEach(g=>{ b+=`<div class="dim">${esc(g[0])}</div>`; g[1].forEach(it=>{ b+=`<div class="q-item"><span class="n">${esc(it[0])}</span><span>${esc(it[1])}</span></div>`; }); });
+  return `<details class="enc"><summary><span class="ic">${E.ic}</span><span class="ti"><b>${esc(E.t)}</b><span>${esc(E.m)}</span></span><span class="chev">⌄</span></summary><div class="enc-body">${b}</div></details>`;
 }
-$("#insts").innerHTML=renderInst(A)+renderInst(B);
+$("#encs").innerHTML=renderEnc(ENC_A)+renderEnc(ENC_B);
 
-$("#crits").innerHTML=CRIT.map((c,i)=>`<div class="crit" data-c="${i}"><div class="q"><b>${esc(c[0])}</b><small>${esc(c[1])}</small></div><div class="scale">${[1,2,3,4].map(n=>`<label><input type="radio" name="cr_${i}" value="${n}"><span class="opt"><span class="nn">${n}</span><span class="ll">${NIV[n-1]}</span></span></label>`).join("")}</div></div>`).join("");
+$("#crits").innerHTML=CRIT.map((c,i)=>`<div class="crit" data-c="${i}"><div class="qq">${esc(c[0])}</div><span class="tagc">${esc(c[1])}</span><div class="scale">${[1,2,3,4].map(n=>`<label><input type="radio" name="cr_${i}" value="${n}"><span class="opt"><span class="nn">${n}</span><span class="ll">${NIV[n-1]}</span></span></label>`).join("")}</div></div>`).join("");
 
 function progreso(){
   let n=0;
@@ -329,29 +267,27 @@ function progreso(){
   if(document.querySelector('[name="dic"]:checked'))n++;
   ["f_nom","f_gra","f_ins"].forEach(id=>{ if(($("#"+id).value||"").trim())n++; });
   if($("#f_fir").checked)n++;
-  $("#pg-n").textContent=n;
-  $("#pg-bar").style.width=Math.round(n/12*100)+"%";
+  $("#pg-n").textContent=n; $("#pg-bar").style.width=Math.round(n/12*100)+"%";
 }
-document.addEventListener("input",progreso);
-document.addEventListener("change",progreso);
+document.addEventListener("input",progreso); document.addEventListener("change",progreso);
 
 $("#enviar").addEventListener("click",()=>{
-  $$(".crit,.field input,.opt-list,#dic").forEach(e=>{e.classList&&e.classList.remove("miss","miss-card")});
+  $$(".crit,.field input,#dic").forEach(e=>{e.classList&&e.classList.remove("miss","miss-card")});
   let miss=[],suma=0,crit=[];
-  CRIT.forEach((c,i)=>{const s=document.querySelector(`[name="cr_${i}"]:checked`); if(!s){miss.push(c[0]);document.querySelector(`[data-c="${i}"]`).classList.add("miss-card");}else{crit.push([c[0],+s.value]);suma+=+s.value;}});
-  const dic=document.querySelector('[name="dic"]:checked'); if(!dic){miss.push("dictamen");$("#dic").classList.add("miss");}
-  [["f_nom","nombre"],["f_gra","grado"],["f_ins","institución"]].forEach(p=>{if(!($("#"+p[0]).value||"").trim()){miss.push(p[1]);$("#"+p[0]).classList.add("miss");}});
-  if(!$("#f_fir").checked)miss.push("firma");
-  if(miss.length){$("#aviso").textContent="Falta completar: "+miss.slice(0,5).join(", ")+(miss.length>5?"…":"")+".";document.querySelector(".miss,.miss-card").scrollIntoView({behavior:"smooth",block:"center"});return;}
+  CRIT.forEach((c,i)=>{const s=document.querySelector(`[name="cr_${i}"]:checked`); if(!s){miss.push(c[1]);document.querySelector(`[data-c="${i}"]`).classList.add("miss-card");}else{crit.push([c[1],+s.value]);suma+=+s.value;}});
+  const dic=document.querySelector('[name="dic"]:checked'); if(!dic){miss.push("conclusión");$("#dic").classList.add("miss");}
+  [["f_nom","nombre"],["f_gra","profesión"],["f_ins","dónde trabaja"]].forEach(p=>{if(!($("#"+p[0]).value||"").trim()){miss.push(p[1]);$("#"+p[0]).classList.add("miss");}});
+  if(!$("#f_fir").checked)miss.push("confirmación");
+  if(miss.length){$("#aviso").textContent="Falta: "+miss.slice(0,4).join(", ")+(miss.length>4?"…":"")+".";document.querySelector(".miss,.miss-card").scrollIntoView({behavior:"smooth",block:"center"});return;}
   $("#aviso").textContent="";
   const idx=(suma/CRIT.length).toFixed(2), dv=dic.value;
   const nom=$("#f_nom").value.trim(),gra=$("#f_gra").value.trim(),ins=$("#f_ins").value.trim(),obs=$("#obs").value.trim();
   const v=getV();v.push({nom,gra,ins,dic:dv,idx,obs,fecha:hoy()});setV(v);
-  const resumen=`*VALIDACIÓN DE INSTRUMENTOS — Tesis A. Luna (UNMSM)*\nExperto: ${nom} — ${gra}\n${ins}\nFecha: ${hoy()}\n\nDictamen: ${dv}\nÍndice de criterios: ${idx}/4\n`+CRIT.map((c,i)=>`• ${c[0]}: ${crit.find(x=>x[0]===c[0])[1]}/4`).join("\n")+(obs?`\n\nObservaciones:\n${obs}`:"");
+  const resumen=`*REVISIÓN DE CUESTIONARIOS — Tesis A. Luna (UNMSM)*\nExperto: ${nom} — ${gra}\n${ins}\nFecha: ${hoy()}\n\nDictamen: ${dv}\nPuntaje promedio: ${idx}/4\n`+CRIT.map(c=>`• ${c[1]}: ${crit.find(x=>x[0]===c[1])[1]}/4`).join("\n")+(obs?`\n\nComentarios:\n${obs}`:"");
   const wa=(CONFIG.WA?`https://wa.me/${CONFIG.WA}?text=`:`https://wa.me/?text=`)+encodeURIComponent(resumen);
-  $("#vista").querySelectorAll(".step,.cta-wrap,.tecnica,.prog").forEach(e=>e.classList.add("oculto"));
+  $("#vista").querySelectorAll(".step,.cta,.prog,header").forEach(e=>e.classList.add("oculto"));
   const box=$("#res-box"); box.classList.remove("oculto");
-  box.innerHTML=`<div class="res"><div class="ck"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg></div><h3>¡Validación lista!</h3><p>Gracias, ${esc(nom)}.</p><div class="pill">${esc(dv)} · índice ${idx}/4</div><p style="font-size:14px">Envíela a Alfredo:</p><textarea readonly id="res-area">${esc(resumen)}</textarea><div class="acc"><a class="btn wa" href="${wa}" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.4 5 5.2-1.4A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.5-.3.3c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1l.8-1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg> Enviar por WhatsApp</a><button class="btn gho" id="copy">Copiar resumen</button><button class="btn gho no-print" id="prt">Guardar PDF</button></div></div>`;
+  box.innerHTML=`<div class="res"><div class="ck"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg></div><h2>¡Listo! Gracias</h2><p>${esc(nom)}, su revisión quedó registrada.</p><div class="badge">${esc(dv)} · puntaje ${idx}/4</div><p style="font-size:14.5px">Ahora envíela a Alfredo:</p><textarea readonly id="res-area">${esc(resumen)}</textarea><div class="acc"><a class="btn btn-wa" href="${wa}" target="_blank" rel="noopener"><svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.4 5 5.2-1.4A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.5-.3.3c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1l.8-1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg> Enviar por WhatsApp</a><button class="btn btn-ghost" id="copy">Copiar texto</button><button class="btn btn-ghost no-print" id="prt">Guardar PDF</button></div></div>`;
   box.scrollIntoView({behavior:"smooth",block:"start"});
   $("#copy").addEventListener("click",function(){const t=$("#res-area");t.select();try{navigator.clipboard.writeText(t.value)}catch(e){try{document.execCommand("copy")}catch(e2){}}this.textContent="¡Copiado! ✓";});
   $("#prt").addEventListener("click",()=>window.print());
@@ -362,11 +298,11 @@ $("#dot").addEventListener("click",()=>{const p=prompt("Clave del investigador:"
 $("#salir").addEventListener("click",()=>{$("#panel").classList.add("oculto");$("#vista").classList.remove("oculto");});
 function pintar(){
   const v=getV(),ap=v.filter(x=>/Aplicable/.test(x.dic)).length,pr=v.length?(v.reduce((a,b)=>a+ +b.idx,0)/v.length).toFixed(2):"—";
-  $("#kpis").innerHTML=[[v.length,"Validaciones"],[ap,"Aplicables"],[pr,"Índice /4"]].map(k=>`<div class="kpi"><div class="v">${k[0]}</div><div class="l">${k[1]}</div></div>`).join("");
-  $("#lista").innerHTML=v.length?v.slice().reverse().map(r=>`<div style="border-bottom:1px solid var(--line);padding:9px 0"><b>${esc(r.nom)}</b> · ${esc(r.dic)} · ${r.idx}/4 <span style="color:var(--muted)">(${r.fecha})</span></div>`).join(""):'<div style="color:var(--muted)">Sin validaciones en este dispositivo.</div>';
+  $("#kpis").innerHTML=[[v.length,"Revisiones"],[ap,"Aplicables"],[pr,"Puntaje /4"]].map(k=>`<div class="kpi"><div class="v">${k[0]}</div><div class="l">${k[1]}</div></div>`).join("");
+  $("#lista").innerHTML=v.length?v.slice().reverse().map(r=>`<div style="border-bottom:1px solid var(--line);padding:9px 0"><b>${esc(r.nom)}</b> · ${esc(r.dic)} · ${r.idx}/4 <span style="color:var(--muted)">(${r.fecha})</span></div>`).join(""):'<div style="color:var(--muted)">Sin revisiones en este dispositivo.</div>';
 }
 function dl(n,c,t){const b=new Blob(["﻿"+c],{type:t});const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download=n;a.click();}
-$("#e-csv").addEventListener("click",()=>{const v=getV();const h=["fecha","nombre","grado","institucion",...CRIT.map(c=>c[0]),"indice","dictamen","observaciones"];const f=[h];v.forEach(r=>f.push([r.fecha,r.nom,r.gra,r.ins,...CRIT.map(()=>""),r.idx,r.dic,r.obs]));dl(`validaciones_${v.length}.csv`,f.map(x=>x.map(c=>{const s=String(c==null?"":c);return /[",;\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s;}).join(";")).join("\n"),"text/csv");});
+$("#e-csv").addEventListener("click",()=>{const v=getV();const h=["fecha","nombre","profesion","institucion",...CRIT.map(c=>c[1]),"puntaje","dictamen","comentarios"];const f=[h];v.forEach(r=>f.push([r.fecha,r.nom,r.gra,r.ins,...CRIT.map(()=>""),r.idx,r.dic,r.obs]));dl(`revisiones_${v.length}.csv`,f.map(x=>x.map(c=>{const s=String(c==null?"":c);return /[",;\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s;}).join(";")).join("\n"),"text/csv");});
 $("#e-json").addEventListener("click",()=>dl(`respaldo_${new Date().toISOString().slice(0,10)}.json`,JSON.stringify(getV(),null,2),"application/json"));
 progreso();
 </script>
